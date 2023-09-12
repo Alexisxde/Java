@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=OperarVector
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=pNotas
+comment2.target=float\ maximaNota(float[])
+comment3.params=pNotas
+comment3.target=float\ promedioNotas(float[])
+numComments=4

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Triangulo
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=pSemiPerimetro\ pLadoA\ pLadoB\ pLadoC
+comment2.target=double\ calcularAreaTriangulo(double,\ double,\ double,\ double)
+numComments=3
