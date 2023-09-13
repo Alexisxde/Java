@@ -7,73 +7,71 @@ public class Pedido {
   private ArrayList<Producto> productos;
 
   /**
-   * 
    * Constructor para los pedidos de ArrayList.
    * 
-   * @param pFecha     Define la fecha de cuando se insertó los productos de tipo
-   *                   Calendar (Objeto).
-   * @param pCliente   Define al cliente de tipo Cliente (Objeto).
-   * @param pProductos Define una lista de productos de tipo ArrayList<Producto>.
+   * @param p_fecha     Define la fecha de cuando se insertó los productos de tipo
+   *                    Calendar (Objeto).
+   * @param p_cliente   Define al cliente de tipo Cliente (Objeto).
+   * @param p_productos Define una lista de productos de tipo ArrayList<Producto>.
    */
-  public Pedido(Calendar pFecha, Cliente pCliente, ArrayList<Producto> pProductos) {
-    this.setFecha(pFecha);
-    this.setCliente(pCliente);
-    this.setProductos(pProductos);
+  public Pedido(Calendar p_fecha, Cliente p_cliente, ArrayList<Producto> p_productos) {
+    this.setFecha(p_fecha);
+    this.setCliente(p_cliente);
+    this.setProductos(p_productos);
   }
 
   /**
+   * Constructor para un solo pedido.
    * 
-   * Constructor para los pedidos de ArrayList.
-   * 
-   * @param pFecha    Define la fecha de cuando se insertó los productos de tipo
-   *                  Calendar (Objeto).
-   * @param pCliente  Define al cliente de tipo Cliente (Objeto).
-   * @param pProducto Define un producto de tipo Producto (Objeto).
+   * @param p_fecha    Define la fecha de cuando se insertó los productos de tipo
+   *                   Calendar (Objeto).
+   * @param p_cliente  Define al cliente de tipo Cliente (Objeto).
+   * @param p_producto Define un producto de tipo Producto (Objeto).
    */
-  public Pedido(Calendar pFecha, Cliente pCliente, Producto pProducto) {
-    this.setFecha(pFecha);
-    this.setCliente(pCliente);
+  public Pedido(Calendar p_fecha, Cliente p_cliente, Producto p_producto) {
+    this.setFecha(p_fecha);
+    this.setCliente(p_cliente);
     this.setProductos(new ArrayList<Producto>());
-    this.agregarProducto(pProducto);
+    this.agregarProducto(p_producto);
   }
 
   /**
    * El método establece el valor del atriburo "fecha" de tipo Calendar
-   * proporcionado del valor
-   * "pFecha" de tipo Calendar.
+   * proporcionado del valor "p_fecha" de tipo Calendar.
    * 
-   * @param pFecha Representa el nuevo valor del atributo "fecha" de tipo Calendar
-   *               (Objeto).
+   * @param p_fecha Representa el nuevo valor del atributo "fecha" de tipo
+   *                Calendar
+   *                (Objeto).
    * @return No devuelve ningún valor.
    */
-  private void setFecha(Calendar pFecha) {
-    this.fecha = pFecha;
+  private void setFecha(Calendar p_fecha) {
+    this.fecha = p_fecha;
   }
 
   /**
    * El método establece el valor del atriburo "cliente" de tipo Cliente
    * proporcionado del valor
-   * "pCliente" de tipo Cliente.
+   * "p_cliente" de tipo Cliente.
    * 
-   * @param pCliente Representa el nuevo valor del atributo "cliente" de tipo
-   *                 Cliente (Objeto).
+   * @param p_cliente Representa el nuevo valor del atributo "cliente" de tipo
+   *                  Cliente (Objeto).
    * @return No devuelve ningún valor.
    */
-  private void setCliente(Cliente pCliente) {
-    this.cliente = pCliente;
+  private void setCliente(Cliente p_cliente) {
+    this.cliente = p_cliente;
   }
 
   /**
    * El método establece el valor del atriburo "productos" de tipo
-   * ArrayList<Producto> proporcionado del valor "pProducto" de tipo
+   * ArrayList<Producto> proporcionado del valor "p_productos" de tipo
    * ArrayList<Producto>.
    * 
-   * @param pProducto Representa el nuevo valor del atributo "productos" de tipo
-   *                  ArrayList<Producto>.
+   * @param p_productos Representa el nuevo valor del atributo "productos" de tipo
+   *                    ArrayList<Producto>.
    * @return No devuelve ningún valor.
    */
-  public void setProductos(ArrayList<Producto> pProductos) {
-    this.productos = pProductos;
+  public void setProductos(ArrayList<Producto> p_productos) {
+    this.productos = p_productos;
   }
 
   /**
@@ -133,22 +131,26 @@ public class Pedido {
 
   /**
    * El método agrega productos al array de productos y si lo agrega devuelve
-   * true.
+   * true caso contrario false.
    * 
+   * @param p_producto El producto que se agregará a la lista del pedido de tipo
+   *                   Producto (Objeto).
    * @return Devuelve un valor booleano (true o false).
    */
-  public boolean agregarProducto(Producto pProducto) {
-    return productos.add(pProducto);
+  public boolean agregarProducto(Producto p_producto) {
+    return this.getProductos().add(p_producto);
   }
 
   /**
    * El método quita productos al array de productos y si lo agrega devuelve
-   * true.
+   * true caso contrario false.
    * 
+   * @param p_producto El producto que se quitará de la lista del pedido de tipo
+   *                   Producto (Objeto).
    * @return Devuelve un valor booleano (true o false).
    */
-  public boolean quitarProducto(Producto pProducto) {
-    return productos.remove(pProducto);
+  public boolean quitarProducto(Producto p_producto) {
+    return this.getProductos().remove(p_producto);
   }
 
   /**
