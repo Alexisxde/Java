@@ -48,7 +48,7 @@ public class Pedido {
   }
 
   /**
-   * El método establece el valor del atriburo "cliente" de tipo Cliente
+   * El método establece el valor del atributo "cliente" de tipo Cliente
    * proporcionado del valor
    * "p_cliente" de tipo Cliente.
    * 
@@ -61,7 +61,7 @@ public class Pedido {
   }
 
   /**
-   * El método establece el valor del atriburo "productos" de tipo
+   * El método establece el valor del atributo "productos" de tipo
    * ArrayList<Producto> proporcionado del valor "p_productos" de tipo
    * ArrayList<Producto>.
    * 

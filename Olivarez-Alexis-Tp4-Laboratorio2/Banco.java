@@ -49,7 +49,7 @@ public class Banco {
   }
 
   /**
-   * El método establece el valor del atriburo "nombre" de tipo String
+   * El método establece el valor del atributo "nombre" de tipo String
    * proporcionado del valor "p_nombre" de tipo String.
    * 
    * @param p_nombre Representa el nuevo valor del atributo "nombre" de tipo
@@ -61,7 +61,7 @@ public class Banco {
   }
 
   /**
-   * El método establece el valor del atriburo "nroSucursal" de tipo int
+   * El método establece el valor del atributo "nroSucursal" de tipo int
    * proporcionado del valor "p_nroSucursal" de tipo int.
    * 
    * @param p_nroSucursal Representa el nuevo valor del atributo "nroSucursal" de
@@ -73,7 +73,7 @@ public class Banco {
   }
 
   /**
-   * El método establece el valor del atriburo "localidad" de tipo Localidad
+   * El método establece el valor del atributo "localidad" de tipo Localidad
    * (Objeto) proporcionado del valor "p_localidad" de tipo Localidad (Objeto).
    * 
    * @param p_localidad Representa el nuevo valor del atributo "localidad" de
@@ -85,7 +85,7 @@ public class Banco {
   }
 
   /**
-   * El método establece el valor del atriburo "empleados" de tipo
+   * El método establece el valor del atributo "empleados" de tipo
    * ArrayList<Empleado> proporcionado del valor "p_empleados" de tipo
    * ArrayList<Empleado>.
    * 
@@ -191,7 +191,7 @@ public class Banco {
   }
 
   /**
-   * El método establece el valor del atriburo "cuentaBancaria" de tipo
+   * El método establece el valor del atributo "cuentaBancaria" de tipo
    * ArrayList<CuentaBancaria> proporcionado del valor "p_cuentaBancaria"
    * de tipo ArrayList<CuentaBancaria>.
    * 
