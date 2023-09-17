@@ -36,12 +36,11 @@ public class Pedido {
   }
 
   /**
-   * El método establece el valor del atriburo "fecha" de tipo Calendar
+   * El método establece el valor del atributo "fecha" de tipo Calendar
    * proporcionado del valor "p_fecha" de tipo Calendar.
    * 
    * @param p_fecha Representa el nuevo valor del atributo "fecha" de tipo
-   *                Calendar
-   *                (Objeto).
+   *                Calendar (Objeto).
    * @return No devuelve ningún valor.
    */
   private void setFecha(Calendar p_fecha) {
@@ -95,7 +94,7 @@ public class Pedido {
   /**
    * Devuelve el valor del atributo "productos".
    * 
-   * @return Devuelve un Array de tipo ArrayList<Productos>.
+   * @return Devuelve un Array de tipo ArrayList<Producto>.
    */
   public ArrayList<Producto> getProductos() {
     return this.productos;
@@ -130,7 +129,7 @@ public class Pedido {
   }
 
   /**
-   * El método agrega productos al array de productos y si lo agrega devuelve
+   * El método agrega productos al ArrayList<Producto> y si lo agrega devuelve
    * true caso contrario false.
    * 
    * @param p_producto El producto que se agregará a la lista del pedido de tipo
@@ -142,7 +141,7 @@ public class Pedido {
   }
 
   /**
-   * El método quita productos al array de productos y si lo agrega devuelve
+   * El método quita productos del ArrayList<Producto> y si lo agrega devuelve
    * true caso contrario false.
    * 
    * @param p_producto El producto que se quitará de la lista del pedido de tipo

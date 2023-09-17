@@ -17,7 +17,7 @@ public class TomaPedido {
       System.out.println("****** Menú de Pedido ******");
       System.out.println("1. Agregar Producto");
       System.out.println("2. Mostrar Pedido");
-      System.out.println("3. Quitar último Producto");
+      System.out.println("3. Quitar producto");
       System.out.println("4. Salir");
       System.out.print("Seleccione una opción: ");
 
