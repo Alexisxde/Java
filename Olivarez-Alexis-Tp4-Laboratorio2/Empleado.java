@@ -241,7 +241,7 @@ public class Empleado {
    *         nombre y sueldo neto.
    */
   public String mostrarLinea() {
-    return this.getCuil() + "\t" + this.getApellido() + "," + this.getNombre() + " $ " + this.sueldoNeto();
+    return this.getCuil() + "\t" + this.getApellido() + ", " + this.getNombre() + " $ " + this.sueldoNeto();
   }
 
   /**

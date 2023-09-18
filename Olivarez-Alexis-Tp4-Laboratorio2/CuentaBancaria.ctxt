@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=CuentaBancaria
-comment0.text=\r\n\ Ejercicio\ 5\ del\ Tp3,\ clase\ CuentaBancaria.\r\n\ \r\n\ @author\ Olivarez\ Alexis\ E.\r\n
 comment1.params=pNroCuenta\ pTitular\ pSaldo
 comment1.target=CuentaBancaria(int,\ Persona,\ double)
 comment1.text=\r\n\ Constructor\ de\ la\ clase\ CuentaBancaria.\r\n\ \r\n\ @param\ pNroCuenta\ Es\ el\ n\u00FAmero\ de\ cuenta\ del\ banco.\r\n\ @param\ pTitular\ \ \ Es\ la\ persona\ titular\ de\ la\ cuenta.\r\n\ @param\ pSaldo\ \ \ \ \ Saldo\ de\ la\ cuenta\ bancaria.\r\n

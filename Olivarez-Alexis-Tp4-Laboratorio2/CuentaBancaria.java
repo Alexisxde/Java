@@ -109,7 +109,7 @@ public class CuentaBancaria {
    */
   public void mostrar() {
     System.out.println("- Cuenta Bancaria -");
-    System.out.println("Titular: " + this.getTitular().nomYApe() + " (" + this.getTitular().edad() + " A\u00F1os)");
+    System.out.println("Titular: " + this.getTitular().nomYApe() + " (" + this.getTitular().edad() + " Años)");
     System.out.println("Saldo: " + this.getSaldo());
   }
 

@@ -53,7 +53,7 @@ public class TomaPedido {
           boolean encontrado = false;
           for (Producto producto : pedido.getProductos()) {
             if (producto.getCodigo() == codigo) {
-              System.out.format("Producto eliminado %s\n", producto.getDescripcion());
+              System.out.format("Producto eliminado %s.\n", producto.getDescripcion());
               encontrado = pedido.quitarProducto(producto);
               break;
             }

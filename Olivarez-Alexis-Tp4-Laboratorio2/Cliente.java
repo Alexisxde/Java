@@ -69,28 +69,28 @@ public class Cliente {
   /**
    * @return Devuelve el valor de la variable de instancia "nroDni".
    */
-  private int getNroDni() {
+  public int getNroDni() {
     return this.nroDni;
   }
 
   /**
    * @return Devuelve el valor de la variable de instancia "nombre".
    */
-  private String getNombre() {
+  public String getNombre() {
     return this.nombre;
   }
 
   /**
    * @return Devuelve el valor de la variable de instancia "apellido".
    */
-  private String getApellido() {
+  public String getApellido() {
     return this.apellido;
   }
 
   /**
    * @return Devuelve el valor de la variable de instancia "saldo".
    */
-  private double getSaldo() {
+  public double getSaldo() {
     return this.saldo;
   }
 

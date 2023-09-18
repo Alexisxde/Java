@@ -8,7 +8,7 @@ public class Localidad {
    * @param pNombre    El nombre de la Localidad.
    * @param pProvincia El nombre de la Provincia.
    */
-  Localidad(String pNombre, String pProvincia) {
+  public Localidad(String pNombre, String pProvincia) {
     this.setNombre(pNombre);
     this.setProvincia(pProvincia);
   }

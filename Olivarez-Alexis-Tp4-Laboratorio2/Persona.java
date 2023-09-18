@@ -15,7 +15,7 @@ public class Persona {
    * @param pApellido       El apellido de la persona.
    * @param pAnioNacimiento El año de nacimiento de la persona.
    */
-  Persona(int pDni, String pNombre, String pApellido, int pAnioNacimiento) {
+  public Persona(int pDni, String pNombre, String pApellido, int pAnioNacimiento) {
     this.setDni(pDni);
     this.setNombre(pNombre);
     this.setApellido(pApellido);
@@ -30,7 +30,7 @@ public class Persona {
    * @param pApellido        El apellido de la persona.
    * @param pFechaNacimiento La fecha de nacimiento de la persona.
    */
-  Persona(int pDni, String pNombre, String pApellido, Calendar pFechaNacimiento) {
+  public Persona(int pDni, String pNombre, String pApellido, Calendar pFechaNacimiento) {
     this.setDni(pDni);
     this.setNombre(pNombre);
     this.setApellido(pApellido);

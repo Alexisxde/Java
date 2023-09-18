@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Producto
-comment0.text=\r\n\ Ejercicio\ 1\ del\ Tp3,\ clase\ Producto.\r\n\ \r\n\ @author\ Olivarez\ Alexis\ E.\r\n
 comment1.params=pCodigo\ pRubro\ pDescripcion\ pCosto\ pPorcPtoRepo\ pExistMinima\ pLaboratorio
 comment1.target=Producto(int,\ java.lang.String,\ java.lang.String,\ double,\ double,\ int,\ Laboratorio)
 comment1.text=\r\n\ Constructor\ de\ la\ clase\ Producto.\r\n\ \r\n\ @param\ pCodigo\ \ \ \ \ \ El\ codigo\ de\ un\ producto.\r\n\ @param\ pRubro\ \ \ \ \ \ \ El\ rubro\ que\ pertenece\ el\ producto.\r\n\ @param\ pDescripcion\ La\ descripci\u00F3n\ de\ un\ producto.\r\n\ @param\ pCosto\ \ \ \ \ \ \ El\ precio\ del\ producto.\r\n\ @param\ pPorcPtoRepo\ //\ \!\ Ni\ idea.\r\n\ @param\ pLaboratorio\ Un\ objeto\ de\ la\ clase\ Laboratorio.\r\n

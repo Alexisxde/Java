@@ -1,8 +1,9 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Random;
-import java.util.Scanner;
+import java.util.Iterator;
 
 public class AplicacionBanco {
   public static void main(String[] args) {
@@ -41,7 +42,7 @@ public class AplicacionBanco {
             String apellido = teclado.nextLine();
             System.out.print("Ingrese el nombre del empleado: ");
             String nombre = teclado.nextLine();
-            System.out.print("Ingrese el sueldo basico del empleado: ");
+            System.out.print("Ingrese el sueldo basico del empleado: $");
             double sueldoBasico = teclado.nextDouble();
             teclado.nextLine(); // Limpia el buffer cuando se haga algo con números.
             banco.agregarEmpleado(new Empleado(cuil, apellido, nombre, sueldoBasico, fecha));
@@ -51,10 +52,19 @@ public class AplicacionBanco {
           banco.listarSueldos();
           break;
         case 3:
-          System.out.format("Ingrese el cuil del empleado a despedir:");
+          System.out.format("Ingrese el cuil del empleado a despedir: ");
           long cuil = teclado.nextLong();
           teclado.nextLine(); // Limpia el buffer cuando se haga algo con números.
           boolean encontrado = false;
+          // Iterator<Empleado> iterator = banco.getEmpleados().iterator();
+          // while (iterator.hasNext()) {
+          // Empleado empleado = iterator.next();
+          // if (empleado.getCuil() == cuil) {
+          // System.out.format("Empleado eliminado %s\n", empleado.apeYNom());
+          // iterator.remove();
+          // encontrado = true;
+          // }
+          // }
           for (Empleado empleado : banco.getEmpleados()) {
             if (empleado.getCuil() == cuil) {
               System.out.format("Empleado eliminado %s\n", empleado.apeYNom());

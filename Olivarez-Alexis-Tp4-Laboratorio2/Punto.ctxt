@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Punto
-comment0.text=\r\n\ Ejercicio\ 6,\ clase\ Punto.\r\n\ \r\n\ @author\ Olivarez\ Alexis\ E.\r\n
 comment1.params=pX\ pY
 comment1.target=Punto(double,\ double)
 comment1.text=\r\n\ Constructor\ de\ la\ clase\ Punto.\r\n\ \r\n\ Asigna\ los\ valores\ de\ los\ par\u00E1metro\ a\ las\ variables\ de\r\n\ instancias\ mediante\ los\ setters.\r\n\ \r\n\ @param\ pX\ Inicializa\ la\ coordenadas\ "x"\r\n\ @param\ pY\ Inicializa\ la\ coordenadas\ "y"\r\n

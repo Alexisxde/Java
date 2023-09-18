@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Laboratorio
-comment0.text=\r\n\ Ejercicio\ 1\ del\ Tp3,\ clase\ Laboratorio.\r\n\ \r\n\ @author\ Olivarez\ Alexis\ E.\r\n
 comment1.params=pNombre\ pDomicilio\ pTelefono\ pCompraMinima\ pDiaEntrega
 comment1.target=Laboratorio(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ int)
 comment1.text=\r\n\ Constructor\ de\ la\ clase\ Laboratorio.\r\n\ \r\n\ Asigna\ los\ valores\ de\ los\ par\u00E1metro\ a\ las\ variables\ de\r\n\ instancias\ mediante\ los\ setters.\r\n\ \r\n\ @param\ pNombre\ \ \ \ \ \ \ El\ nombre\ del\ laboratorio.\r\n\ @param\ pDomicilio\ \ \ \ El\ domicilio\ del\ laboratorio.\r\n\ @param\ pTelefono\ \ \ \ \ El\ telefono\ del\ laboratorio.\r\n\ @param\ pCompraMinima\ La\ compra\ minima\ de\ un\ producto.\r\n\ @param\ pDiaEntrega\ \ \ El\ dia\ que\ se\ va\ entregar\ el\ producto.\r\n

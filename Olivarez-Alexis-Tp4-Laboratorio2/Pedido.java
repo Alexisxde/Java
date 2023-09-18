@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.text.SimpleDateFormat;
 
 public class Pedido {
   private Calendar fecha;
@@ -69,7 +70,7 @@ public class Pedido {
    *                    ArrayList<Producto>.
    * @return No devuelve ningún valor.
    */
-  public void setProductos(ArrayList<Producto> p_productos) {
+  private void setProductos(ArrayList<Producto> p_productos) {
     this.productos = p_productos;
   }
 
@@ -158,18 +159,14 @@ public class Pedido {
    * financiado y el total al contado.
    */
   public void mostrarPedido() {
-    String[] meses = {
-        "Enero", "Febrero", "Marzo", "Abril",
-        "Mayo", "Junio", "Julio", "Agosto",
-        "Septiembre", "Octubre", "Noviembre", "Diciembre"
-    };
-    String dia = String.format("%s", this.getFecha().get(Calendar.DAY_OF_MONTH));
-    String mes = String.format("%s", meses[this.getFecha().get(Calendar.MONTH)]);
-    String anio = String.format("%s", this.getFecha().get(Calendar.YEAR));
-
-    System.out.format("****** Detalle del pedido ****** Fecha: %s de %s de %s.\n", dia, mes, anio);
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd 'de' MMMM 'de' yyyy");
+    String fechaFormateada = dateFormat.format(this.getFecha().getTime());
+    System.out.format("****** Detalle del pedido ****** Fecha: %s.\n", fechaFormateada);
     System.out.println("Producto\tPrecio Lista\tPrecio Contado");
     System.out.println("-------------------------------------------------");
+    if (this.getProductos().isEmpty()) {
+      System.out.println("No hay productos...");
+    }
     for (Producto producto : this.getProductos()) {
       System.out.format("%s\t$%s\t$%s\n", producto.getDescripcion(), producto.precioLista(), producto.precioContado());
     }

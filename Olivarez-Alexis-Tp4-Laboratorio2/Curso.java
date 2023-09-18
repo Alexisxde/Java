@@ -83,6 +83,9 @@ public class Curso {
       System.out.println("No hay alumnos inscriptos a este curso!\n");
       return;
     }
+    // this.getAlumnos().values().forEach(alumno -> {
+    // System.out.format("%s, %s\n", alumno.getLu(), alumno.nomYApe());
+    // });
     for (Alumno alumno : this.getAlumnos().values()) {
       System.out.format("%s, %s\n", alumno.getLu(), alumno.nomYApe());
     }

@@ -16,7 +16,7 @@ public class GestionComercio {
     comercio.altaEmpleado(alexis);
     System.out.println("\n****-- Se da de baja a Mercedes porque abandona el comercio --****");
     comercio.bajaEmpleado(37045987);
-    System.out.format("Cantidad de Empleados %s\n\n", comercio.cantidadDeEmpleados());
+    System.out.format("Cantidad de Empleados: %s\n\n", comercio.cantidadDeEmpleados());
     comercio.nomina();
   }
 }

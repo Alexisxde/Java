@@ -38,7 +38,7 @@ public class Carrera {
     Alumno buscar = curso.buscarAlumno(buscarLu);
     buscar.mostrar();
     // Mostrar el promedio del alumno solicitado, según libreta
-    int alumnoLu = 23564;
+    int alumnoLu = maria.getLu();
     System.out.format("\n****-- Mostrar promedio del alumno %s --****\n", alumnoLu);
     curso.imprimirPromedioDelAlumno(alumnoLu);
   }

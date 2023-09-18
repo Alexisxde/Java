@@ -22,7 +22,7 @@ public class Alumno {
    * @param pNombre   El nombre del alumno.
    * @param pApellido El apellido del alumno.
    */
-  Alumno(int pLu, String pNombre, String pApellido) {
+  public Alumno(int pLu, String pNombre, String pApellido) {
     this.setLu(pLu);
     this.setNombre(pNombre);
     this.setApellido(pApellido);

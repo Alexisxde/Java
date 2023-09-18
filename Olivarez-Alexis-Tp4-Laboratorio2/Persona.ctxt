@@ -1,9 +1,8 @@
 #BlueJ class context
 comment0.target=Persona
-comment0.text=\r\n\ Ejercicio\ 5,\ clase\ Persona.\r\n\ \r\n\ @author\ Olivarez\ Alexis\ E.\r\n
 comment1.params=pDni\ pNombre\ pApellido\ pAnioNacimiento
 comment1.target=Persona(int,\ java.lang.String,\ java.lang.String,\ int)
-comment1.text=\r\n\ Constructor\ de\ la\ clase\ Persona.\r\n\ \r\n\ @param\ pDni\ \ \ \ \ \ \ \ \ \ \ \ \ El\ DNI\ de\ la\ persona.\r\n\ @param\ pNombre\ \ \ \ \ \ \ \ \ \ El\ nombre\ de\ la\ persona.\r\n\ @param\ pApellido\ \ \ \ \ \ \ \ El\ apellido\ de\ la\ persona.\r\n\ @param\ pAnioNacimiento\ \ El\ a\u00F1o\ de\ nacimiento\ de\ la\ persona.\r\n
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Persona.\r\n\ \r\n\ @param\ pDni\ \ \ \ \ \ \ \ \ \ \ \ El\ DNI\ de\ la\ persona.\r\n\ @param\ pNombre\ \ \ \ \ \ \ \ \ El\ nombre\ de\ la\ persona.\r\n\ @param\ pApellido\ \ \ \ \ \ \ El\ apellido\ de\ la\ persona.\r\n\ @param\ pAnioNacimiento\ El\ a\u00F1o\ de\ nacimiento\ de\ la\ persona.\r\n
 comment10.params=
 comment10.target=java.util.Calendar\ getFechaNacimiento()
 comment10.text=\r\n\ @return\ Devuelve\ el\ valor\ de\ la\ variable\ de\ instancia\ "fechaNacimiento"\ que\r\n\ \ \ \ \ \ \ \ \ es\ de\ tipo\ Calendar.\r\n

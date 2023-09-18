@@ -1,9 +1,8 @@
 #BlueJ class context
 comment0.target=Localidad
-comment0.text=\r\n\ Ejercicio\ 8,\ clase\ Localidad.\r\n\ \r\n\ @author\ Olivarez\ Alexis\ E.\r\n
 comment1.params=pNombre\ pProvincia
 comment1.target=Localidad(java.lang.String,\ java.lang.String)
-comment1.text=\r\n\ Constructor\ de\ la\ clase\ Localidad.\r\n\ \r\n\ @param\ pNombre\ \ \ El\ nombre\ de\ la\ Localidad.\r\n\ @param\ pProvincia\ El\ nombre\ de\ la\ Provincia.\r\n
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Localidad.\r\n\ \r\n\ @param\ pNombre\ \ \ \ El\ nombre\ de\ la\ Localidad.\r\n\ @param\ pProvincia\ El\ nombre\ de\ la\ Provincia.\r\n
 comment2.params=pNombre
 comment2.target=void\ setNombre(java.lang.String)
 comment2.text=\r\n\ El\ m\u00E9todo\ establece\ el\ valor\ de\ la\ variable\ "nombre"\ proporcionado\ del\r\n\ valor\ "pNombre".\r\n\r\n\ @param\ pNombre\ Es\ un\ String\ que\ representa\ el\ nuevo\ valor\ para\ la\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ variable\ "nombre".\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debe\ ser\ un\ String\ no\ nulo\ y\ no\ vac\u00EDo.\r\n
