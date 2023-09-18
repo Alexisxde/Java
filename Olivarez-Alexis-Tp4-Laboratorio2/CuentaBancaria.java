@@ -1,8 +1,3 @@
-/**
- * Ejercicio 5 del Tp3, clase CuentaBancaria.
- * 
- * @author Olivarez Alexis E.
- */
 public class CuentaBancaria {
   private int nroCuenta;
   private Persona titular;

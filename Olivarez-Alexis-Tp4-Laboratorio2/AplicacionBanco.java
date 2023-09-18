@@ -90,7 +90,7 @@ public class AplicacionBanco {
           Random n = new Random();
           int numCuenta = n.nextInt(1000000000);
           System.out.println(numCuenta);
-          banco.agregarCuentaBancaria(new CuentaBancaria(numCuenta, titular));
+          banco.agregarCuentaBancaria(new CuentaBancaria(numCuenta, titular, 500));
           break;
         case 5:
           banco.mostrar();

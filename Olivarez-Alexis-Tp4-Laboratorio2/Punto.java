@@ -1,8 +1,3 @@
-/**
- * Ejercicio 6, clase Punto.
- * 
- * @author Olivarez Alexis E.
- */
 public class Punto {
   private double x;
   private double y;

@@ -55,6 +55,7 @@ public class TomaPedido {
             if (producto.getCodigo() == codigo) {
               System.out.format("Producto eliminado %s\n", producto.getDescripcion());
               encontrado = pedido.quitarProducto(producto);
+              break;
             }
           }
           if (!encontrado) {

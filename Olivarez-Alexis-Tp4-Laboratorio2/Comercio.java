@@ -54,21 +54,35 @@ public class Comercio {
 
   public void sueldoNeto(long p_cuil) {
     Empleado empleado = this.buscarEmpleado(p_cuil);
-    if (empleado != null) {
-      System.out.format("El sueldo neto de %s es de %s", empleado.nomYApe(), empleado.sueldoNeto());
-    } else {
-      System.out.println("El empleado no existe");
+    // if (empleado != null) {
+    // System.out.format("El sueldo neto de %s es de %s", empleado.nomYApe(),
+    // empleado.sueldoNeto());
+    // } else {
+    // System.out.format("No se encontró ningún empleado con el cuil %s\n", p_cuil);
+    // }
+    if (empleado == null) {
+      System.out.format("No se encontró ningún empleado con el cuil %s\n", p_cuil);
+      return;
     }
+    System.out.format("El sueldo neto de %s es de %s", empleado.nomYApe(), empleado.sueldoNeto());
   }
 
   public void nomina() {
-    if (this.getEmpleados() != null) {
-      System.out.println("**** Nomina de empleados de Avanti SRL ****");
-      for (Empleado empleado : this.getEmpleados().values()) {
-        System.out.println(empleado.mostrarLinea());
-      }
-    } else {
-      System.out.println("No hay empleados!");
+    // if (this.getEmpleados().isEmpty()) {
+    // System.out.println("**** Nomina de empleados de Avanti SRL ****");
+    // for (Empleado empleado : this.getEmpleados().values()) {
+    // System.out.println(empleado.mostrarLinea());
+    // }
+    // } else {
+    // System.out.println("No hay empleados!");
+    // }
+    if (this.getEmpleados().isEmpty()) {
+      System.out.println("No hay empleados!\n");
+      return;
+    }
+    System.out.println("**** Nomina de empleados de Avanti SRL ****");
+    for (Empleado empleado : this.getEmpleados().values()) {
+      System.out.println(empleado.mostrarLinea());
     }
   }
 }

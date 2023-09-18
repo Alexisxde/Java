@@ -1,8 +1,3 @@
-/**
- * Ejercicio 8, clase Localidad.
- * 
- * @author Olivarez Alexis E.
- */
 public class Localidad {
   private String nombre;
   private String provincia;
@@ -10,7 +5,7 @@ public class Localidad {
   /**
    * Constructor de la clase Localidad.
    * 
-   * @param pNombre   El nombre de la Localidad.
+   * @param pNombre    El nombre de la Localidad.
    * @param pProvincia El nombre de la Provincia.
    */
   Localidad(String pNombre, String pProvincia) {

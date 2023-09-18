@@ -172,14 +172,8 @@ public class Banco {
   }
 
   /**
-   * El método muestra la información de la lista de empleados.
-   * 
-   * Ejemplo:
-   * Banco: RIO Sucursal: 3
-   * Localidad: Corrientes Provincia: Corrientes
-   * 27267504235 Perez, Lorena ---------------- $121200.00
-   * 20159462638 Dominguez, Pedro ------------- $265000.40
-   * Total a Pagar: --------------------------- $386200.40
+   * El método muestra información del banco, cuil, apellido, nombre, y sueldo
+   * neto de cada empleado y el total que deberá pagar la empresa.
    */
   public void listarSueldos() {
     System.out.format("Banco %s\tSucursal: %s\n", this.getNombre(), this.getNroSucursal());
@@ -238,10 +232,19 @@ public class Banco {
     return this.getCuentaBancaria().remove(p_cuenta);
   }
 
+  /**
+   * El método "mostrarSaldoCero" Muestra una lista de las cuentas con saldo en
+   * 0, número de cuenta, apellido y nombre del titular de la cuenta.
+   */
   private void mostrarSaldoCero() {
     System.out.println("------------------------------------------------------");
     System.out.println("Titulares con Cuenta en Saldo Cero");
     System.out.println("------------------------------------------------------");
+    if (this.getCuentaBancaria().isEmpty()) {
+      System.out.println("No hay cuentas con saldo cero");
+      System.out.println("------------------------------------------------------");
+      return;
+    }
     for (CuentaBancaria cuenta : this.getCuentaBancaria()) {
       if (cuenta.getSaldo() == 0) {
         System.out.format("%s\t%s\n", cuenta.getNroCuenta(), cuenta.getTitular().apeYNom());
@@ -250,6 +253,11 @@ public class Banco {
     System.out.println("------------------------------------------------------");
   }
 
+  /**
+   * Devuelve la cantidad de cuentas activas (Saldo mayor a 0).
+   * 
+   * @return Devuelve un entero.
+   */
   private int cuentasSaldoActivo() {
     int cuentasActivas = 0;
     for (CuentaBancaria cuenta : this.getCuentaBancaria()) {
@@ -260,6 +268,12 @@ public class Banco {
     return cuentasActivas;
   }
 
+  /**
+   * El método muestra un resumen de las cuentas bancarias.
+   * - Número total de Cuentas Bancarias
+   * - Cuentas Activas
+   * - Cuentas Saldo Cero
+   */
   public void mostrarResumen() {
     System.out.println("************************************************************");
     System.out.println("RESUMEN DE CUENTAS BANCARIAS");
@@ -269,6 +283,10 @@ public class Banco {
     System.out.format("Cuentas Saldo Cero: %s\n", this.getCuentaBancaria().size() - this.cuentasSaldoActivo());
   }
 
+  /**
+   * Muestra datos del banco, un resumen de las cuentas bancarias y una lista de
+   * las cuentas de saldo en 0.
+   */
   public void mostrar() {
     System.out.format("Banco %s\tSucursal: %s\n", this.getNombre(), this.getNroSucursal());
     System.out.format("%s\n", this.getLocalidad().mostrar());

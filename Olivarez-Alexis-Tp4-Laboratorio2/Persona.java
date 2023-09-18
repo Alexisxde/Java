@@ -1,12 +1,7 @@
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-/**
- * Ejercicio 5, clase Persona.
- * 
- * @author Olivarez Alexis E.
- */
-class Persona {
+public class Persona {
   private int nroDni;
   private String nombre;
   private String apellido;
@@ -15,10 +10,10 @@ class Persona {
   /**
    * Constructor de la clase Persona.
    * 
-   * @param pDni             El DNI de la persona.
-   * @param pNombre          El nombre de la persona.
-   * @param pApellido        El apellido de la persona.
-   * @param pAnioNacimiento  El año de nacimiento de la persona.
+   * @param pDni            El DNI de la persona.
+   * @param pNombre         El nombre de la persona.
+   * @param pApellido       El apellido de la persona.
+   * @param pAnioNacimiento El año de nacimiento de la persona.
    */
   Persona(int pDni, String pNombre, String pApellido, int pAnioNacimiento) {
     this.setDni(pDni);
@@ -26,7 +21,7 @@ class Persona {
     this.setApellido(pApellido);
     this.setFechaNacimiento(new GregorianCalendar(pAnioNacimiento, 0, 1));
   }
-  
+
   /**
    * Constructor de la clase Persona.
    * 

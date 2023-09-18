@@ -1,8 +1,3 @@
-/**
- * Ejercicio 1 del Tp3, clase Laboratorio.
- * 
- * @author Olivarez Alexis E.
- */
 public class Laboratorio {
   private String nombre;
   private String domicilio;

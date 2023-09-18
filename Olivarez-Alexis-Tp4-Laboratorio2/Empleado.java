@@ -1,11 +1,6 @@
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-/**
- * Ejercicio 11, clase Empleado.
- * 
- * @author Olivarez Alexis E.
- */
 public class Empleado {
   private long cuil;
   private String apellido;
@@ -27,7 +22,7 @@ public class Empleado {
     this.setApellido(pApellido);
     this.setNombre(pNombre);
     this.setSueldoBasico(pSueldoBasico);
-    this.setFechaIngreso(new GregorianCalendar(pAnioIngreso, Calendar.JANUARY, 1));
+    this.setAnioIngreso(pAnioIngreso);
   }
 
   /**
@@ -109,9 +104,9 @@ public class Empleado {
    * @param pAnioIngreso Es un número entero que representa el año de que ingreso
    *                     el empleado a la empresa.
    */
-  //private void setAnioIngreso(int pAnioIngreso) {
-    //this.anioIngreso = pAnioIngreso;
-  //}
+  private void setAnioIngreso(int pAnioIngreso) {
+    this.setFechaIngreso(new GregorianCalendar(pAnioIngreso, Calendar.JANUARY, 1));
+  }
 
   /**
    * @return Devuelve el valor de la variable de instancia "cuil".
@@ -148,9 +143,12 @@ public class Empleado {
     return this.fechaIngreso;
   }
 
-  //public int getAnioIngreso() {
-    //return this.anioIngreso;
-  //}
+  /**
+   * @return Devuelve el año de ingreso del empleado.
+   */
+  public int getAnioIngreso() {
+    return this.getFechaIngreso().get(Calendar.YEAR);
+  }
 
   /**
    * El método "antiguedad" Calcula la diferencia entre año actual y año de que

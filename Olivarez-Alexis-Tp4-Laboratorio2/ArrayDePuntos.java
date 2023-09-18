@@ -1,12 +1,6 @@
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
-/**
- * Crea una Array de 6 posiciones para Objetos Punto.
- * 
- * @author Olivarez Alexis Emanuel
- * @version 11-09-23
- */
 public class ArrayDePuntos {
   public static void main(String[] args) {
     DecimalFormat formato = new DecimalFormat("#.###");

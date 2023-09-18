@@ -1,8 +1,3 @@
-/**
- * Ejercicio 2, clase Laboratorio.
- * 
- * @author Olivarez Alexis E.
- */
 public class Cliente {
   private int nroDni;
   private String nombre;

@@ -57,21 +57,34 @@ public class Curso {
   }
 
   public void imprimirPromedioDelAlumno(int p_lu) {
+    // Alumno alumno = buscarAlumno(p_lu);
+    // if (alumno != null) {
+    // System.out.format("Promedio: %s\n", alumno.promedio());
+    // } else {
+    // System.out.format("****-- Lu %s no encontrado --****\n", p_lu);
+    // }
     Alumno alumno = buscarAlumno(p_lu);
-    if (alumno != null) {
-      System.out.format("Promedio: %s\n", alumno.promedio());
-    } else {
-      System.out.format("****-- Alumno %s no encontrado --****\n", p_lu);
+    if (alumno == null) {
+      System.out.format("****-- Lu %s no encontrado --****\n", p_lu);
+      return;
     }
+    System.out.format("Promedio: %s\n", alumno.promedio());
   }
 
   public void mostrarInscriptos() {
-    if (this.getAlumnos() != null) {
-      for (Alumno alumno : this.getAlumnos().values()) {
-        System.out.format("%s %s\n", alumno.getLu(), alumno.nomYApe());
-      }
-    } else {
-      System.out.println("No hay alumnos inscriptos a este curso!");
+    // if (this.getAlumnos().isEmpty()) {
+    // for (Alumno alumno : this.getAlumnos().values()) {
+    // System.out.format("%s, %s\n", alumno.getLu(), alumno.nomYApe());
+    // }
+    // } else {
+    // System.out.println("No hay alumnos inscriptos a este curso!\n");
+    // }
+    if (this.getAlumnos().isEmpty()) {
+      System.out.println("No hay alumnos inscriptos a este curso!\n");
+      return;
+    }
+    for (Alumno alumno : this.getAlumnos().values()) {
+      System.out.format("%s, %s\n", alumno.getLu(), alumno.nomYApe());
     }
   }
 }

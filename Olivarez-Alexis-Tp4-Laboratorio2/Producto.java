@@ -1,8 +1,3 @@
-/**
- * Ejercicio 1 del Tp3, clase Producto.
- * 
- * @author Olivarez Alexis E.
- */
 public class Producto {
   private int codigo;
   private String rubro;
