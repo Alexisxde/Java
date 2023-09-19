@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class Curso {
   private String nombre;
@@ -30,7 +31,7 @@ public class Curso {
     return this.alumnos;
   }
 
-  public void agregarAlumno(Alumno p_alumno) {
+  public void inscribirAlumno(Alumno p_alumno) {
     this.getAlumnos().put(p_alumno.getLu(), p_alumno);
   }
 
@@ -83,11 +84,12 @@ public class Curso {
       System.out.println("No hay alumnos inscriptos a este curso!\n");
       return;
     }
-    // this.getAlumnos().values().forEach(alumno -> {
+    // for (Alumno alumno : this.getAlumnos().values()) {
     // System.out.format("%s, %s\n", alumno.getLu(), alumno.nomYApe());
-    // });
-    for (Alumno alumno : this.getAlumnos().values()) {
-      System.out.format("%s, %s\n", alumno.getLu(), alumno.nomYApe());
+    // }
+    for (Map.Entry<Integer, Alumno> entry : this.getAlumnos().entrySet()) {
+      Alumno alumno = entry.getValue();
+      System.out.format("%d, %s\n", alumno.getLu(), alumno.nomYApe());
     }
   }
 }

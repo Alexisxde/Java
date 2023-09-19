@@ -154,6 +154,9 @@ public class Banco {
    * @return Devuelve un valor booleano (true o false).
    */
   public boolean quitarEmpleado(Empleado p_empleado) {
+    if (this.getEmpleados().size() == 1) {
+      return false;
+    }
     return this.getEmpleados().remove(p_empleado);
   }
 
@@ -176,12 +179,12 @@ public class Banco {
    * neto de cada empleado y el total que deberá pagar la empresa.
    */
   public void listarSueldos() {
-    System.out.format("Banco %s\tSucursal: %s\n", this.getNombre(), this.getNroSucursal());
-    System.out.format("%s\n", this.getLocalidad().mostrar());
+    System.out.format("\nBanco %s\tSucursal: %s\n", this.getNombre(), this.getNroSucursal());
+    System.out.format("%s\n\n", this.getLocalidad().mostrar());
     for (Empleado empleado : this.getEmpleados()) {
       System.out.format("%s\n", empleado.mostrarLinea());
     }
-    System.out.format("Total a Pagar:------------------------------ $%s\n", this.sueldosAPagar());
+    System.out.format("\nTotal a Pagar:------------------------------ $%s\n", this.sueldosAPagar());
   }
 
   /**
@@ -240,7 +243,7 @@ public class Banco {
     System.out.println("------------------------------------------------------");
     System.out.println("Titulares con Cuenta en Saldo Cero");
     System.out.println("------------------------------------------------------");
-    if (this.getCuentaBancaria().isEmpty()) {
+    if (this.getCuentaBancaria().size() - this.cuentasSaldoActivo() == 0) {
       System.out.println("No hay cuentas con saldo cero");
       System.out.println("------------------------------------------------------");
       return;

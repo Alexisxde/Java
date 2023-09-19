@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Scanner;
 
@@ -9,8 +8,18 @@ public class TomaPedido {
     Cliente cliente = new Cliente(44542230, "Alexis", "Olivarez", 10000);
     Laboratorio laboratorio = new Laboratorio("Colgate S.A.", "9 de Julio 9348", "0800-1131-2343");
 
-    ArrayList<Producto> productos = new ArrayList<>();
-    Pedido pedido = new Pedido(fecha, cliente, productos);
+    System.out.print("Ingrese el codigo del producto: ");
+    int codigo1 = teclado.nextInt();
+    teclado.nextLine(); // Limpia el buffer cuando se haga algo con números.
+    System.out.print("Ingrese el nombre del producto: ");
+    String description1 = teclado.nextLine();
+    System.out.print("Ingrese el rubro del producto: ");
+    String rubro1 = teclado.nextLine();
+    System.out.print("Ingrese el precio unitario del producto: ");
+    double precioUnitario1 = teclado.nextDouble();
+    teclado.nextLine(); // Limpia el buffer cuando se haga algo con números.
+    Producto primerProducto = new Producto(codigo1, rubro1, description1, precioUnitario1, laboratorio);
+    Pedido pedido = new Pedido(fecha, cliente, primerProducto);
 
     int opcion = 0;
     while (opcion != 4) {
@@ -47,6 +56,10 @@ public class TomaPedido {
           pedido.mostrarPedido();
           break;
         case 3:
+          if (pedido.getProductos().size() == 1) {
+            System.out.println("No se pueden eliminar más productos porque el pedido debe tener un producto.");
+            break;
+          }
           System.out.format("Ingrese el codigo del producto a eliminar: ");
           int codigo = teclado.nextInt();
           teclado.nextLine(); // Limpia el buffer cuando se haga algo con números.

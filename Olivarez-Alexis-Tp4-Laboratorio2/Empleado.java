@@ -17,7 +17,7 @@ public class Empleado {
    * @param pSueldoBasico El sueldo basico del empleado.
    * @param pAnioIngreso  El año que ingreso el empleado.
    */
-  Empleado(long pCuil, String pApellido, String pNombre, double pSueldoBasico, int pAnioIngreso) {
+  public Empleado(long pCuil, String pApellido, String pNombre, double pSueldoBasico, int pAnioIngreso) {
     this.setCuil(pCuil);
     this.setApellido(pApellido);
     this.setNombre(pNombre);
@@ -34,7 +34,7 @@ public class Empleado {
    * @param pSueldoBasico El sueldo basico del empleado.
    * @param pFechaIngreso La fecha que ingreso el empleado.
    */
-  Empleado(long pCuil, String pApellido, String pNombre, double pSueldoBasico, Calendar pFechaIngreso) {
+  public Empleado(long pCuil, String pApellido, String pNombre, double pSueldoBasico, Calendar pFechaIngreso) {
     this.setCuil(pCuil);
     this.setApellido(pApellido);
     this.setNombre(pNombre);
@@ -157,7 +157,7 @@ public class Empleado {
    * @return Devuelve la cantidad de años de servicio.
    */
   public int antiguedad() {
-    Calendar fechaHoy = new GregorianCalendar();
+    Calendar fechaHoy = Calendar.getInstance();
     int anioHoy = fechaHoy.get(Calendar.YEAR);
     Calendar fechaIngreso = this.getFechaIngreso();
     int anio = fechaIngreso.get(Calendar.YEAR);
@@ -241,7 +241,7 @@ public class Empleado {
    *         nombre y sueldo neto.
    */
   public String mostrarLinea() {
-    return this.getCuil() + "\t" + this.getApellido() + ", " + this.getNombre() + " $ " + this.sueldoNeto();
+    return this.getCuil() + "\t" + this.getApellido() + ", " + this.getNombre() + " $" + this.sueldoNeto();
   }
 
   /**

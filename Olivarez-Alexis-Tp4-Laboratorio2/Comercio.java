@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class Comercio {
   private String nombre;
@@ -35,7 +36,7 @@ public class Comercio {
   }
 
   public Empleado bajaEmpleado(long p_cuil) {
-    Empleado bajaEmpleado = this.buscarEmpleado(p_cuil);
+    Empleado bajaEmpleado = (Empleado) this.buscarEmpleado(p_cuil);
     this.getEmpleados().remove(p_cuil);
     return bajaEmpleado;
   }
@@ -49,11 +50,11 @@ public class Comercio {
   }
 
   public Empleado buscarEmpleado(long p_cuil) {
-    return this.getEmpleados().get(p_cuil);
+    return (Empleado) this.getEmpleados().get(p_cuil);
   }
 
   public void sueldoNeto(long p_cuil) {
-    Empleado empleado = this.buscarEmpleado(p_cuil);
+    Empleado empleado = (Empleado) this.buscarEmpleado(p_cuil);
     // if (empleado != null) {
     // System.out.format("El sueldo neto de %s es de %s", empleado.nomYApe(),
     // empleado.sueldoNeto());
@@ -70,7 +71,8 @@ public class Comercio {
   public void nomina() {
     // if (this.getEmpleados().isEmpty()) {
     // System.out.println("**** Nomina de empleados de Avanti SRL ****");
-    // for (Empleado empleado : this.getEmpleados().values()) {
+    // for (Object objeto : this.getEmpleados().values()) {
+    // Empleado empleado = (Empleado) objeto;
     // System.out.println(empleado.mostrarLinea());
     // }
     // } else {
@@ -81,7 +83,13 @@ public class Comercio {
       return;
     }
     System.out.println("**** Nomina de empleados de Avanti SRL ****");
-    for (Empleado empleado : this.getEmpleados().values()) {
+    // for (Object objeto : this.getEmpleados().values()) {
+    // Empleado empleado = (Empleado) objeto;
+    // System.out.println(empleado.mostrarLinea());
+    // }
+    for (Object entryObj : this.getEmpleados().entrySet()) {
+      Map.Entry entry = (Map.Entry) entryObj;
+      Empleado empleado = (Empleado) entry.getValue();
       System.out.println(empleado.mostrarLinea());
     }
   }

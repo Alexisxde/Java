@@ -150,6 +150,9 @@ public class Pedido {
    * @return Devuelve un valor booleano (true o false).
    */
   public boolean quitarProducto(Producto p_producto) {
+    if (this.getProductos().size() == 1) {
+      return false;
+    }
     return this.getProductos().remove(p_producto);
   }
 

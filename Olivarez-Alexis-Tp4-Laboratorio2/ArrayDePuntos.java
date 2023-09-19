@@ -4,16 +4,16 @@ import java.text.DecimalFormat;
 public class ArrayDePuntos {
   public static void main(String[] args) {
     DecimalFormat formato = new DecimalFormat("#.###");
-    Scanner scanner = new Scanner(System.in);
+    Scanner teclado = new Scanner(System.in);
     Punto[] arrayPunto = new Punto[6];
     // Punto arrayPunto[] = new Punto[6];
 
     for (int i = 0; i < arrayPunto.length; i++) {
       System.out.format("Ingrese los datos para el punto %s \n", i + 1);
       System.out.print("Coodenada x: ");
-      double x = scanner.nextDouble();
+      double x = teclado.nextDouble();
       System.out.print("Coodenada y: ");
-      double y = scanner.nextDouble();
+      double y = teclado.nextDouble();
       arrayPunto[i] = new Punto(x, y);
     }
 
@@ -25,6 +25,6 @@ public class ArrayDePuntos {
       double distancia = arrayPunto[i].distanciaA(arrayPunto[i + 1]);
       System.out.format("Distancia entre Punto %s y Punto %s: %s.\n", i + 1, i + 2, formato.format(distancia));
     }
-    scanner.close();
+    teclado.close();
   }
 }

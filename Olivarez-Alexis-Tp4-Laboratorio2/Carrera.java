@@ -1,7 +1,7 @@
 public class Carrera {
   public static void main(String[] args) {
     // Crear una instancia de Curso y varias de la clase Alumno...
-    Curso curso = new Curso("Argentina Programa 4.0");
+    Curso curso = new Curso("Curso de Programación");
     Alumno pedro = new Alumno(32555, "Pedro", "Gomez");
     Alumno maria = new Alumno(23564, "Maria", "Vasquez");
     Alumno juan = new Alumno(30123, "Juan", "Perez");
@@ -16,10 +16,10 @@ public class Carrera {
     marcela.setNota1(10);
     marcela.setNota2(10);
     // Asignarles notas de parciales a los alumnos...
-    curso.agregarAlumno(pedro);
-    curso.agregarAlumno(maria);
-    curso.agregarAlumno(juan);
-    curso.agregarAlumno(marcela);
+    curso.inscribirAlumno(pedro);
+    curso.inscribirAlumno(maria);
+    curso.inscribirAlumno(juan);
+    curso.inscribirAlumno(marcela);
     // Imprimir la cantidad y la lista de alumnos inscriptos al curso...
     System.out.format("****-- Cantidad de inscriptos: %s\n", curso.cantidadDeAlumnos());
     curso.mostrarInscriptos();

@@ -3,20 +3,29 @@ import java.util.Scanner;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Random;
-import java.util.Iterator;
 
 public class AplicacionBanco {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);
-    Calendar fecha = new GregorianCalendar(1998, 9, 1);
     Localidad localidad = new Localidad("Corrientes", "Corrientes");
     ArrayList<Empleado> arrayEmpleados = new ArrayList<>();
+    System.out.print("Ingrese el cuil del empleado: ");
+    int cuil1 = teclado.nextInt();
+    teclado.nextLine(); // Limpia el buffer cuando se haga algo con números.
+    System.out.print("Ingrese el apellido del empleado: ");
+    String apellido1 = teclado.nextLine();
+    System.out.print("Ingrese el nombre del empleado: ");
+    String nombre1 = teclado.nextLine();
+    System.out.print("Ingrese el sueldo basico del empleado: $");
+    double sueldoBasico1 = teclado.nextDouble();
+    Calendar fecha1 = Calendar.getInstance();
     ArrayList<CuentaBancaria> arrayCuentasBasica = new ArrayList<>();
     Banco banco = new Banco("Santander Rio", localidad, 3, arrayEmpleados, arrayCuentasBasica);
+    banco.agregarEmpleado(new Empleado(cuil1, apellido1, nombre1, sueldoBasico1, fecha1));
 
     int opcion = 0;
     while (opcion != 7) {
-      System.out.println("****** Menú ******");
+      System.out.println("\n****** Menú ******");
       System.out.println("1. Agregar empleado");
       System.out.println("2. Mostrar lista de sueldos");
       System.out.println("3. Despedir un empleado");
@@ -45,6 +54,7 @@ public class AplicacionBanco {
             System.out.print("Ingrese el sueldo basico del empleado: $");
             double sueldoBasico = teclado.nextDouble();
             teclado.nextLine(); // Limpia el buffer cuando se haga algo con números.
+            Calendar fecha = Calendar.getInstance();
             banco.agregarEmpleado(new Empleado(cuil, apellido, nombre, sueldoBasico, fecha));
           }
           break;
@@ -52,22 +62,17 @@ public class AplicacionBanco {
           banco.listarSueldos();
           break;
         case 3:
-          System.out.format("Ingrese el cuil del empleado a despedir: ");
+          if (banco.getEmpleados().size() == 1) {
+            System.out.println("\nNo se pueden eliminar más empleados porque en el banco debe tener un empleado.");
+            break;
+          }
+          System.out.println("\nIngrese el cuil del empleado a despedir: ");
           long cuil = teclado.nextLong();
           teclado.nextLine(); // Limpia el buffer cuando se haga algo con números.
           boolean encontrado = false;
-          // Iterator<Empleado> iterator = banco.getEmpleados().iterator();
-          // while (iterator.hasNext()) {
-          // Empleado empleado = iterator.next();
-          // if (empleado.getCuil() == cuil) {
-          // System.out.format("Empleado eliminado %s\n", empleado.apeYNom());
-          // iterator.remove();
-          // encontrado = true;
-          // }
-          // }
           for (Empleado empleado : banco.getEmpleados()) {
             if (empleado.getCuil() == cuil) {
-              System.out.format("Empleado eliminado %s\n", empleado.apeYNom());
+              System.out.format("Empleado eliminado %s.\n", empleado.apeYNom());
               encontrado = banco.quitarEmpleado(empleado);
               break; // Sale del bucle una vez que se encuentra y elimina el empleado
             }
@@ -77,7 +82,7 @@ public class AplicacionBanco {
           }
           break;
         case 4:
-          System.out.format("Ingrese los datos de la cuenta\n");
+          System.out.println("\nIngrese los datos de la cuenta: ");
           System.out.print("Ingrese su dni: ");
           int dni = teclado.nextInt();
           teclado.nextLine(); // Limpia el buffer cuando se haga algo con números.
@@ -99,26 +104,28 @@ public class AplicacionBanco {
           Persona titular = new Persona(dni, nombre2, apellido2, fecha2);
           Random n = new Random();
           int numCuenta = n.nextInt(1000000000);
-          System.out.println(numCuenta);
-          banco.agregarCuentaBancaria(new CuentaBancaria(numCuenta, titular, 500));
+          System.out.print("Ingrese saldo a depositar: ");
+          int saldo = teclado.nextInt();
+          System.out.format("Nro de cuenta: %s.\n", numCuenta);
+          banco.agregarCuentaBancaria(new CuentaBancaria(numCuenta, titular, saldo >= 0 ? saldo : 0));
           break;
         case 5:
           banco.mostrar();
           break;
         case 6:
-          System.out.format("Ingrese el N° Cuenta a quitar: ");
+          System.out.format("\nIngrese el N° Cuenta a quitar: ");
           int nCuenta = teclado.nextInt();
           teclado.nextLine(); // Limpia el buffer cuando se haga algo con números.
           boolean encontrado2 = false;
           for (CuentaBancaria cuenta : banco.getCuentaBancaria()) {
             if (cuenta.getNroCuenta() == nCuenta) {
-              System.out.format("Cuenta %s eliminada\n", cuenta.getNroCuenta());
+              System.out.format("Cuenta %s eliminada.\n", cuenta.getNroCuenta());
               encontrado2 = banco.quitarCuentaBancaria(cuenta);
               break; // Sale del bucle una vez que se encuentra y elimina la cuenta
             }
           }
           if (!encontrado2) {
-            System.out.println("Cuenta no encontrada...");
+            System.out.println("\nCuenta no encontrada...");
           }
           break;
         case 7:

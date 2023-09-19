@@ -119,7 +119,7 @@ public class Persona {
    * @return Devuelve la edad actual de la persona.
    */
   public int edad() {
-    Calendar fechaHoy = new GregorianCalendar();
+    Calendar fechaHoy = Calendar.getInstance();
     int anioHoy = fechaHoy.get(Calendar.YEAR);
     return anioHoy - this.getFechaNacimiento().get(Calendar.YEAR);
   }
