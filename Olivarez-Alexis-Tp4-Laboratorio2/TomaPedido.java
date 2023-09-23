@@ -18,11 +18,11 @@ public class TomaPedido {
     System.out.print("Ingrese el precio unitario del producto: ");
     double precioUnitario1 = teclado.nextDouble();
     teclado.nextLine(); // Limpia el buffer cuando se haga algo con números.
-    Producto primerProducto = new Producto(codigo1, rubro1, description1, precioUnitario1, laboratorio);
-    Pedido pedido = new Pedido(fecha, cliente, primerProducto);
+    Pedido pedido = new Pedido(fecha, cliente,
+        new Producto(codigo1, rubro1, description1, precioUnitario1, laboratorio));
 
     int opcion = 0;
-    while (opcion != 4) {
+    do {
       System.out.println("****** Menú de Pedido ******");
       System.out.println("1. Agregar Producto");
       System.out.println("2. Mostrar Pedido");
@@ -34,22 +34,21 @@ public class TomaPedido {
       teclado.nextLine();
       switch (opcion) {
         case 1:
-          System.out.println("Ingrese la cantidad de productos que desea agregar: ");
+          System.out.print("Ingrese el codigo del producto: ");
+          int code = teclado.nextInt();
+          teclado.nextLine(); // Limpia el buffer cuando se haga algo con números.
+          System.out.print("Ingrese el nombre del producto: ");
+          String description = teclado.nextLine();
+          System.out.print("Ingrese el rubro del producto: ");
+          String rubro = teclado.nextLine();
+          System.out.print("Ingrese el precio unitario del producto: ");
+          double precioUnitario = teclado.nextDouble();
+          teclado.nextLine(); // Limpia el buffer cuando se haga algo con números.
+          System.out.print("Ingrese la cantidad que va llevar: ");
           int nProductos = teclado.nextInt();
           teclado.nextLine(); // Limpia el buffer cuando se haga algo con números.
           for (int i = 0; i < nProductos; i++) {
-            System.out.format("Ingrese los datos del producto %s para el pedido.\n", i + 1);
-            System.out.print("Ingrese el codigo del producto: ");
-            int codigo = teclado.nextInt();
-            teclado.nextLine(); // Limpia el buffer cuando se haga algo con números.
-            System.out.print("Ingrese el nombre del producto: ");
-            String description = teclado.nextLine();
-            System.out.print("Ingrese el rubro del producto: ");
-            String rubro = teclado.nextLine();
-            System.out.print("Ingrese el precio unitario del producto: ");
-            double precioUnitario = teclado.nextDouble();
-            teclado.nextLine(); // Limpia el buffer cuando se haga algo con números.
-            pedido.agregarProducto(new Producto(codigo, rubro, description, precioUnitario, laboratorio));
+            pedido.agregarProducto(new Producto(code, rubro, description, precioUnitario, laboratorio));
           }
           break;
         case 2:
@@ -81,7 +80,7 @@ public class TomaPedido {
         default:
           System.out.println("Opción inválida.");
       }
-    }
+    } while (opcion != 4);
     teclado.close();
   }
 }

@@ -10,7 +10,7 @@ public class CuentaBancaria {
    * @param pTitular   Es la persona titular de la cuenta.
    * @param pSaldo     Saldo de la cuenta bancaria.
    */
-  CuentaBancaria(int pNroCuenta, Persona pTitular, double pSaldo) {
+  public CuentaBancaria(int pNroCuenta, Persona pTitular, double pSaldo) {
     this.setNroCuenta(pNroCuenta);
     this.setTitular(pTitular);
     this.setSaldo(pSaldo);
@@ -22,7 +22,7 @@ public class CuentaBancaria {
    * @param pNroCuenta Es el número de cuenta del banco.
    * @param pTitular   Es la persona titular de la cuenta.
    */
-  CuentaBancaria(int pNroCuenta, Persona pTitular) {
+  public CuentaBancaria(int pNroCuenta, Persona pTitular) {
     this.setNroCuenta(pNroCuenta);
     this.setTitular(pTitular);
     this.setSaldo(0);

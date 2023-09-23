@@ -55,8 +55,6 @@ public class Localidad {
    * @return Cadena de texto concatenando Localidad y Provincia.
    */
   public String mostrar() {
-    // return "Localidad: " + this.getNombre() + "\tProvincia: " +
-    // this.getProvincia();
     return String.format("Localidad: %s\tProvincia: %s", this.getNombre(), this.getProvincia());
   }
 }

@@ -21,6 +21,7 @@ public class Banco {
     this.setLocalidad(p_localidad);
     this.setNroSucursal(p_nroSucursal);
     this.setEmpleados(p_empleados);
+    this.setCuentaBancaria(new ArrayList<CuentaBancaria>());
   }
 
   /**
@@ -37,8 +38,20 @@ public class Banco {
     this.setNroSucursal(p_nroSucursal);
     this.setEmpleados(new ArrayList<Empleado>());
     this.agregarEmpleado(p_empleado);
+    this.setCuentaBancaria(new ArrayList<CuentaBancaria>());
   }
 
+  /**
+   * Constructor para una lista de empleados y una lista de cuentas bancarias.
+   * 
+   * @param p_nombre      Nombre del Banco de tipo String.
+   * @param p_localidad   Localidad de tipo Localidad (Objeto).
+   * @param p_nroSucursal Número de sucursal de tipo int.
+   * @param p_empleado    Lista de empleados de tipo
+   *                      ArrayList<Empleado>.
+   * @param p_cuentas     Lista de cuentas bancarias de tipo
+   *                      ArrayList<CuentaBancaria>
+   */
   public Banco(String p_nombre, Localidad p_localidad, int p_nroSucursal, ArrayList<Empleado> p_empleados,
       ArrayList<CuentaBancaria> p_cuentas) {
     this.setNombre(p_nombre);
@@ -273,9 +286,9 @@ public class Banco {
 
   /**
    * El método muestra un resumen de las cuentas bancarias.
-   * - Número total de Cuentas Bancarias
-   * - Cuentas Activas
-   * - Cuentas Saldo Cero
+   * - Número total de Cuentas Bancarias.
+   * - Cuentas Activas.
+   * - Cuentas Saldo Cero.
    */
   public void mostrarResumen() {
     System.out.println("************************************************************");

@@ -161,8 +161,6 @@ public class Laboratorio {
    * y el telefono.
    */
   public String mostrar() {
-    // return "Laboratorio: " + this.getNombre() + "\n" + "Domicilio: " +
-    // this.getDomicilio() + " - " + "Telefono: " + this.getTelefono();
     return String.format("Laboratorio: %s\nDomicilio: %s - Telefono: %s", this.getNombre(), this.getDomicilio(),
         this.getTelefono());
   }
