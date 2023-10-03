@@ -1,6 +1,5 @@
 public class AplicacionFacultad {
   public static void main(String[] args) {
-
     Cargo cargo1 = new Exclusivo("Taller de Programación II", 800.0, 2013, 10, 15, 10);
     Cargo cargo2 = new Cargo("Salud Publica", 1400.0, 2011, 20);
     Cargo cargo3 = new SemiExclusivo("Programación Orientada a Objetos", 800.0, 2003, 10, 5);
