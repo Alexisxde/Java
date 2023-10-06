@@ -1,6 +1,6 @@
 import java.text.DecimalFormat;
 
-public class Rectangulo {
+public class Rectangulo extends FiguraGeometrica {
   private Punto origen;
   private double ancho;
   private double alto;
@@ -13,7 +13,7 @@ public class Rectangulo {
    * @param p_alto   El alto del rectángulo.
    */
   public Rectangulo(Punto p_origen, double p_ancho, double p_alto) {
-    this.setOrigen(p_origen);
+    super(p_origen);
     this.setAncho(p_ancho);
     this.setAlto(p_alto);
   }
@@ -25,6 +25,7 @@ public class Rectangulo {
    * @param p_alto  El alto del rectángulo.
    */
   public Rectangulo(double p_ancho, double p_alto) {
+    super(new Punto());
     this.setAncho(p_ancho);
     this.setAlto(p_alto);
   }
@@ -101,6 +102,7 @@ public class Rectangulo {
    *
    * @return La superficie del rectangulo (double).
    */
+  @Override
   public double superficie() {
     return this.getAlto() * this.getAncho();
   }
@@ -156,6 +158,7 @@ public class Rectangulo {
   /**
    * @return Un String del nombre de la figura "Rectangulo" (String).
    */
+  @Override
   public String nombreFigura() {
     return "****** Rectangulo ******";
   }

@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public abstract class FiguraGeometrica {
   private Punto origen;
 
@@ -13,11 +15,13 @@ public abstract class FiguraGeometrica {
     this.setOrigen(p_origen);
   }
 
-  public String nombreFigura() {
-    return "";
-  }
+  public abstract String nombreFigura();
 
-  public double superficie() {
-    return 1.1;
+  public abstract double superficie();
+
+  public void mostrarSuperficie() {
+    DecimalFormat df = new DecimalFormat("#.##");
+    System.out.println("\n" + this.nombreFigura());
+    System.out.format("Superficie: %s\n", df.format(this.superficie()));
   }
 }
