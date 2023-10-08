@@ -58,7 +58,7 @@ public class Profesor extends Persona {
    *         debido a la restricción de tres cargos (boolean).
    */
   public boolean agregarCargo(Cargo p_cargo) {
-    if (this.getCargos().size() >= 3) {
+    if (this.getCargos().size() == 3) {
       System.out.println("El profesor ya tiene tres cargos asignados, no se puede agregar más.");
       return false;
     }

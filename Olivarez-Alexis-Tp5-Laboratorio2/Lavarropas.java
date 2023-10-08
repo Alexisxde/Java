@@ -47,7 +47,7 @@ public class Lavarropas extends ArtefactoHogar {
   public float creditoConAdicional(int p_cuotas, float p_interes) {
     float valorCuota = super.cuotaCredito(p_cuotas, p_interes);
     if (!this.isAutomatico()) {
-      valorCuota += valorCuota * 0.02;
+      valorCuota -= valorCuota * 0.02;
     }
     return valorCuota;
   }

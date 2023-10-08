@@ -3,8 +3,6 @@ public abstract class ArtefactoHogar {
   private float precio;
   private int stock;
 
-  public abstract float creditoConAdicional(int p_cuotas, float p_interes);
-
   public ArtefactoHogar(String p_marca, float p_precio, int p_stock) {
     this.setMarca(p_marca);
     this.setPrecio(p_precio);
@@ -40,6 +38,8 @@ public abstract class ArtefactoHogar {
   }
 
   public float cuotaCredito(int p_cuotas, float p_interes) {
-    return (this.getPrecio() + p_interes) / p_cuotas;
+    return (this.getPrecio() + (this.getPrecio() * p_interes)) / p_cuotas;
   }
+
+  public abstract float creditoConAdicional(int p_cuotas, float p_interes);
 }
