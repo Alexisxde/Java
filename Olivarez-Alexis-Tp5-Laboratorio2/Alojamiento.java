@@ -10,15 +10,7 @@ public abstract class Alojamiento {
     this.setNombre(p_nombre);
     this.setPrecioBase(p_precioBase);
     this.setDiasAlquiler(p_diasAlquiler);
-    // this.setServicios(new ArrayList<Servicio>());
-  }
-
-  public Alojamiento(String p_nombre, double p_precioBase, int p_diasAlquiler, Servicio p_servicio) {
-    this.setNombre(p_nombre);
-    this.setPrecioBase(p_precioBase);
-    this.setDiasAlquiler(p_diasAlquiler);
-    // this.setServicios(new ArrayList<Servicio>());
-    this.agregarServicio(p_servicio);
+    this.setServicios(new ArrayList<Servicio>());
   }
 
   public Alojamiento(String p_nombre, double p_precioBase, int p_diasAlquiler, ArrayList<Servicio> p_servicios) {
@@ -84,7 +76,7 @@ public abstract class Alojamiento {
 
   public void listarServicios() {
     for (Servicio servicio : this.getServicios()) {
-      System.out.format("%s: $%.2f", servicio.getDescripcion(), servicio.getPrecio());
+      System.out.format("%s: $%.2f\n", servicio.getDescripcion(), servicio.getPrecio());
     }
   }
 

@@ -1,5 +1,4 @@
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 public class Empleado extends Persona {
   private long cuil;
@@ -85,7 +84,10 @@ public class Empleado extends Persona {
    *                      el empleado a la empresa.
    */
   private void setAnioIngreso(int p_anioIngreso) {
-    this.setFechaIngreso(new GregorianCalendar(p_anioIngreso, Calendar.JANUARY, 1));
+    this.setFechaIngreso(Calendar.getInstance());
+    this.getFechaIngreso().set(Calendar.DAY_OF_MONTH, 1);
+    this.getFechaIngreso().set(Calendar.MONTH, 0);
+    this.getFechaIngreso().set(Calendar.YEAR, p_anioIngreso);
   }
 
   /**

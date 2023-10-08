@@ -95,13 +95,13 @@ public class Punto {
    * Calcula la distancia entre este punto y otro punto dado.
    * Distancia = √(x1 - x2)² + (y1 - y2)²
    *
-   * @param pPunto El punto con el que se calculará la distancia.
+   * @param p_punto El punto con el que se calculará la distancia.
    * @return Devuelve la distancia entre el punto actual y el punto pasado como
    *         parámetro.
    */
-  public double distanciaA(Punto pPunto) {
-    double x = Math.pow(pPunto.getX() - this.getX(), 2.0);
-    double y = Math.pow(pPunto.getY() - this.getY(), 2.0);
+  public double distanciaA(Punto p_punto) {
+    double x = Math.pow(p_punto.getX() - this.getX(), 2.0);
+    double y = Math.pow(p_punto.getY() - this.getY(), 2.0);
     return Math.sqrt(x + y);
   }
 }

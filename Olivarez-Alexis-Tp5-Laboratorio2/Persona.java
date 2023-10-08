@@ -1,5 +1,4 @@
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 public class Persona {
   private int nroDni;
@@ -19,7 +18,10 @@ public class Persona {
     this.setDni(p_dni);
     this.setNombre(p_nombre);
     this.setApellido(p_apellido);
-    this.setFechaNacimiento(new GregorianCalendar(p_anioNacimiento, 0, 1));
+    this.setFechaNacimiento(Calendar.getInstance());
+    this.getFechaNacimiento().set(Calendar.DAY_OF_MONTH, 1);
+    this.getFechaNacimiento().set(Calendar.MONTH, 0);
+    this.getFechaNacimiento().set(Calendar.YEAR, p_anioNacimiento);
   }
 
   /**
@@ -113,14 +115,6 @@ public class Persona {
   }
 
   /**
-   * @return Devuelve el valor de la variable de instancia "anioNacimiento" que
-   *         es de tipo int. (no esta más este atributo)
-   */
-  public int getAnioNacimiento() {
-    return this.getFechaNacimiento().get(Calendar.YEAR);
-  }
-
-  /**
    * El método "edad" Calcula la diferencia entre año actual y año de nacimiento
    * de una persona.
    *
@@ -139,7 +133,7 @@ public class Persona {
    *         "nombre" y "apellido" con un espacio entremedio.
    */
   public String nomYApe() {
-    return String.format("%s %s", this.getNombre(), this.getApellido());
+    return this.getNombre() + " " + this.getApellido();
   }
 
   /**
@@ -149,16 +143,16 @@ public class Persona {
    *         "apellido" y "nombre" con un espacio entremedio.
    */
   public String apeYNom() {
-    return String.format("%s %s", this.getApellido(), this.getNombre());
+    return this.getApellido() + " " + this.getNombre();
   }
 
   /**
-   * El método "mostrar" Muestra información de la persona, nombre y apellido,
-   * DNI y la edad.
+   * El método "mostrar" Muestra información de la persona, nombre y apellido, DNI
+   * y la edad.
    */
   public void mostrar() {
-    System.out.format("Nombre y Apellido: %s\n", this.nomYApe());
-    System.out.format("DNI: %s\tEdad: %s años\n", this.getDni(), this.edad());
+    System.out.println("Nombre y Apellido: " + this.nomYApe());
+    System.out.println("DNI: " + this.getDni() + " " + "Edad: " + this.edad());
   }
 
   /**

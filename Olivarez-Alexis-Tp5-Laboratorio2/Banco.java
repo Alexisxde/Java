@@ -1,10 +1,9 @@
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 public class Banco {
   public static void main(String[] args) {
-    Calendar fechaNacimiento = new GregorianCalendar();
+    Calendar fechaNacimiento = Calendar.getInstance();
     fechaNacimiento.set(2000, Calendar.SEPTEMBER, 8);
 
     Persona cliente = new Persona(44, "Juan", "Perez", fechaNacimiento);

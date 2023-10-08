@@ -29,12 +29,12 @@ public class CuentaCorriente extends CuentaBancaria {
   /**
    * El método establece el valor de la variable "limiteDescubierto" proporcionado
    * del valor
-   * "pLimiteDescubierto".
+   * "p_limiteDescubierto".
    * 
-   * @param pLimiteDescubierto // ?
+   * @param p_limiteDescubierto // ?
    */
-  private void setLimiteDescubierto(double pLimiteDescubierto) {
-    this.limiteDescubierto = pLimiteDescubierto;
+  private void setLimiteDescubierto(double p_limiteDescubierto) {
+    this.limiteDescubierto = p_limiteDescubierto;
   }
 
   /**

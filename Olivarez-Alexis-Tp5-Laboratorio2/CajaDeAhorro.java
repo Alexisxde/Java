@@ -30,13 +30,13 @@ public class CajaDeAhorro extends CuentaBancaria {
   /**
    * El método establece el valor de la variable "extraccionesPosibles"
    * proporcionado del valor
-   * "pExtraccionesPosibles".
+   * "p_extraccionesPosibles".
    * 
-   * @param pExtraccionesPosibles Es un valor doble que representa el nuevo valor
-   *                              de la variable "extraccionesPosibles".
+   * @param p_extraccionesPosibles Es un valor doble que representa el nuevo valor
+   *                               de la variable "extraccionesPosibles".
    */
-  private void setExtraccionesPosibles(int pExtraccionesPosibles) {
-    this.extraccionesPosibles = pExtraccionesPosibles;
+  private void setExtraccionesPosibles(int p_extraccionesPosibles) {
+    this.extraccionesPosibles = p_extraccionesPosibles;
   }
 
   /**
