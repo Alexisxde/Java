@@ -42,12 +42,12 @@ public class Delegacion extends Visitante {
 
   @Override
   public void mostrar() {
-    System.out.format("Delegación: %s\n", this.getNombre());
+    System.out.format("Delegacion: %s\n", this.getNombre());
     System.out.println("Integrantes");
     for (Individuo integrante : this.getIntegrantes()) {
       integrante.mostrar();
     }
-    System.out.format("Cantidad de Integrantes: %s\n", this.cantidadDeIntegrantes());
+    System.out.format("Cantidad de Integrantes: %s\n\n", this.cantidadDeIntegrantes());
   }
 
   @Override

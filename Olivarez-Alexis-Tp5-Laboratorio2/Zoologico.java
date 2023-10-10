@@ -37,7 +37,8 @@ public class Zoologico {
 
   public void listaTipoVisitante(Calendar p_fecha, String p_tipoVisitante) {
     for (Visitante visitante : this.getVisitantes()) {
-      if (visitante.tipoVisitante() == p_tipoVisitante) {
+      int posteriorFecha = visitante.getFechaVisita().compareTo(p_fecha);
+      if (visitante.tipoVisitante() == p_tipoVisitante && posteriorFecha > 0) {
         visitante.mostrar();
       }
     }
@@ -45,18 +46,25 @@ public class Zoologico {
 
   public void listaVisitante(Calendar p_fecha) {
     for (Visitante visitante : this.getVisitantes()) {
-      visitante.mostrar();
+      int posteriorFecha = visitante.getFechaVisita().compareTo(p_fecha);
+      if (posteriorFecha >= 0) {
+        visitante.mostrar();
+      }
     }
   }
 
   public double recaudacion(Calendar p_fechaDesde, Calendar p_fechaHasta) {
     double recaudacion = 0;
     for (Visitante visitante : this.getVisitantes()) {
-      if (visitante instanceof Delegacion) {
-        Delegacion delegacion = (Delegacion) visitante;
-        recaudacion += delegacion.entrada();
-      } else {
-        recaudacion += visitante.entrada();
+      int posteriorFecha = visitante.getFechaVisita().compareTo(p_fechaDesde);
+      int anteriorFecha = visitante.getFechaVisita().compareTo(p_fechaHasta);
+      if (posteriorFecha >= 0 && anteriorFecha <= 0) {
+        if (visitante instanceof Delegacion) {
+          Delegacion Delegacion = (Delegacion) visitante;
+          recaudacion += Delegacion.entrada();
+        } else {
+          recaudacion += visitante.entrada();
+        }
       }
     }
     return recaudacion;
