@@ -41,11 +41,7 @@ public class Gerencia {
   public int contarAlojamientos(String p_tipoAlojamiento) {
     int contador = 0;
     for (Alojamiento alojamiento : this.getAlojamientoAlquilados()) {
-      if (alojamiento instanceof Hotel && p_tipoAlojamiento == "Hotel") {
-        contador++;
-      } else if (alojamiento instanceof Cabaña && p_tipoAlojamiento == "Cabaña") {
-        contador++;
-      }
+      contador += alojamiento.contar(p_tipoAlojamiento);
     }
     return contador;
   }

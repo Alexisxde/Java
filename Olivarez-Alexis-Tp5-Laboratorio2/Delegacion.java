@@ -25,15 +25,19 @@ public class Delegacion extends Visitante {
 
   @Override
   public double entrada() {
-    double entradaCosto = 0;
-    for (Individuo integrante : this.getIntegrantes()) {
-      entradaCosto += integrante.entrada();
-    }
+    double entradaCosto = this.cantidadDeIntegrantes() * 10;
     return entradaCosto -= entradaCosto * 0.10;
   }
 
   public void inscribirIndividuo(Individuo p_individuo) {
     this.getIntegrantes().add(p_individuo);
+  }
+
+  public void eliminarIndividuo(Individuo p_individuo) {
+    if (this.cantidadDeIntegrantes() == 1) {
+      System.out.println("No se puede eliminar, porque tiene que quedar un Individuo.");
+    }
+    this.getIntegrantes().remove(p_individuo);
   }
 
   public int cantidadDeIntegrantes() {
@@ -52,12 +56,13 @@ public class Delegacion extends Visitante {
 
   @Override
   public void listarPorFecha(Calendar p_fecha, String p_visitante) {
-    throw new UnsupportedOperationException("Unimplemented method 'listarPorFecha'");
+    if (this.getFechaVisita().equals(p_fecha) && p_visitante == this.tipoVisitante()) {
+      this.mostrar();
+    }
   }
 
   @Override
   public String tipoVisitante() {
-    return this.getClass().getName();
+    return "Delegacion";
   }
-
 }

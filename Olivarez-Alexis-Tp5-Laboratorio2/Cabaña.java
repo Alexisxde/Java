@@ -29,8 +29,10 @@ public class Cabaña extends Alojamiento {
 
   @Override
   public int contar(String p_alojamiento) {
-    int contador = 0;
-    return contador;
+    if (p_alojamiento == "Cabaña") {
+      return 1;
+    }
+    return 0;
   }
 
   public void liquidar() {

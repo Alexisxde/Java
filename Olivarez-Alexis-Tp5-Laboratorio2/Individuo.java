@@ -28,12 +28,13 @@ public class Individuo extends Visitante {
 
   @Override
   public void listarPorFecha(Calendar p_fecha, String p_visitante) {
-    throw new UnsupportedOperationException("Unimplemented method 'listarPorFecha'");
+    if (this.getFechaVisita().equals(p_fecha) && p_visitante == this.tipoVisitante()) {
+      this.mostrar();
+    }
   }
 
   @Override
   public String tipoVisitante() {
-    return this.getClass().getName();
+    return "Individuo";
   }
-
 }
