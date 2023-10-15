@@ -1,4 +1,3 @@
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class Jardin {
@@ -52,13 +51,12 @@ public class Jardin {
   }
 
   public void detalleFiguras() {
-    DecimalFormat df = new DecimalFormat("#.##");
     System.out.format("Presupuesto: %s\n", this.getNombre());
     for (FiguraGeometrica figura : this.getFiguras()) {
       figura.mostrarSuperficie();
     }
     System.out.println("---------------------------------------------");
-    System.out.format("Total a cubrir: %s\n", df.format(this.cuantosMetros()));
+    System.out.format("Total a cubrir: %.2f\n", this.cuantosMetros());
     System.out.format("Comprar %s Latas.", this.cuantasLatas());
   }
 }

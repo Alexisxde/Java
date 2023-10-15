@@ -1,5 +1,3 @@
-import java.text.DecimalFormat;
-
 public class Rectangulo extends FiguraGeometrica {
   private Punto origen;
   private double ancho;
@@ -122,11 +120,10 @@ public class Rectangulo extends FiguraGeometrica {
    * ancho, superficie y perímetro.
    */
   public void caracteristicas() {
-    DecimalFormat df = new DecimalFormat("#.##");
     System.out.println(this.nombreFigura());
     System.out.println(
         "Centro: " + this.getOrigen().coordenadas() + " - Alto: " + this.getAlto() + " - Ancho: " + this.getAncho());
-    System.out.println("Superficie: " + df.format(this.superficie()) + " - Perimetro: " + df.format(this.perimetro()));
+    System.out.format("Superficie: %.2f - Perimetro: %.2f\n", this.superficie(), this.perimetro());
   }
 
   /**

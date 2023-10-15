@@ -61,6 +61,18 @@ public class CajaDeAhorro extends CuentaBancaria {
   }
 
   /**
+   * @param p_importe Valor que se extraerá en la cuenta del banco.
+   * @return Si se pudo extraer o no (boolean).
+   */
+  public boolean extraer(double p_importe) {
+    if (!this.puedeExtraer(p_importe)) {
+      return false;
+    }
+    this.setExtraccionesPosibles(this.getExtraccionesPosibles() - 1);
+    return super.extraer(p_importe);
+  }
+
+  /**
    * El método "mostrar" imprime el número de cuenta, el saldo, el titular y sus
    * extracciones disponibles de la cuenta bancaria.
    */
@@ -70,8 +82,17 @@ public class CajaDeAhorro extends CuentaBancaria {
     System.out.println("Extracciones Posibles: " + this.getExtraccionesPosibles());
   }
 
+  /**
+   * @param p_importe Valor que se extraerá en la cuenta del banco.
+   * @return Un String que avisa si puede extraer o no.
+   */
   public String xQNoPuedeExtraer(double p_importe) {
-    return this.puedeExtraer(p_importe) ? "Si puede extraer\n"
-        : "No tiene habilitadas mas extracciones! o No puede extraer mas que el saldo!";
+    if (this.puedeExtraer(p_importe)) {
+      return "Si puede extraer\n";
+    } else if (this.getExtraccionesPosibles() == 0) {
+      return "No tiene habilitadas mas extracciones!\n";
+    } else {
+      return "No puede extraer mas que el saldo!\n";
+    }
   }
 }

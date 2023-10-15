@@ -32,10 +32,7 @@ public class Hotel extends Alojamiento {
 
   @Override
   public int contar(String p_alojamiento) {
-    if (p_alojamiento == "Hotel") {
-      return 1;
-    }
-    return 0;
+    return p_alojamiento == "Hotel" ? 1 : 0;
   }
 
   public void liquidar() {

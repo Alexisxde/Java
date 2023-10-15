@@ -19,6 +19,9 @@ public class Premium extends Etiqueta {
     return (this.getCosto() * q) + (this.adicional() * q);
   }
 
+  /**
+   * @return Un String del nombre de la etiqueta "Premium" (String).
+   */
   @Override
   protected String tipo() {
     return "Premium";

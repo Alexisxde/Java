@@ -1,5 +1,3 @@
-import java.text.DecimalFormat;
-
 public class Elipse extends FiguraGeometrica {
   private double sEjeMayor;
   private double sEjeMenor;
@@ -70,12 +68,11 @@ public class Elipse extends FiguraGeometrica {
    * mayor, semieje menor y superficie.
    */
   public void caracteristicas() {
-    DecimalFormat df = new DecimalFormat("#.##");
     System.out.format("%s\n", this.nombreFigura());
-    System.out.format("Centro: %s - Semieje Mayor: %s - Semieje Menor: %s\n", super.getOrigen().coordenadas(),
-        df.format(this.getsEjeMayor()),
-        df.format(this.getsEjeMenor()));
-    System.out.format("Superficie: %s", df.format(this.superficie()));
+    System.out.format("Centro: %s - Semieje Mayor: %.2f - Semieje Menor: %.2f\n", super.getOrigen().coordenadas(),
+        this.getsEjeMayor(),
+        this.getsEjeMenor());
+    System.out.format("Superficie: %.2f", this.superficie());
   }
 
   /**

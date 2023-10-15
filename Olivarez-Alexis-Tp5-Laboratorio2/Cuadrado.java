@@ -1,5 +1,3 @@
-import java.text.DecimalFormat;
-
 public class Cuadrado extends Rectangulo {
   private double lado;
 
@@ -44,9 +42,8 @@ public class Cuadrado extends Rectangulo {
    * superficie y perímetro.
    */
   public void características() {
-    DecimalFormat df = new DecimalFormat("#.##");
     System.out.format("%s\n", this.nombreFigura());
     System.out.format("Origen: %s - Lado: %s\n", super.getOrigen().coordenadas(), this.getLado());
-    System.out.format("Superficie: %s - Perímetro: %s\n", df.format(super.superficie()), super.perimetro());
+    System.out.format("Superficie: %.2f - Perímetro: %s\n", super.superficie(), super.perimetro());
   }
 }

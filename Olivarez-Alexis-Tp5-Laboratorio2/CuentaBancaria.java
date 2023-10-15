@@ -84,6 +84,15 @@ public class CuentaBancaria {
   }
 
   /**
+   * @param p_importe Valor que se extraerá en la cuenta del banco.
+   * @return Si se pudo extraer o no (boolean).
+   */
+  public boolean extraer(double p_importe) {
+    this.setSaldo(this.getSaldo() - p_importe);
+    return true;
+  }
+
+  /**
    * 
    * @param p_importe Nuevo valor que se deposita en la cuenta del banco.
    * @return El nuevo saldo después del deposito en la cuenta del banco.
@@ -94,29 +103,11 @@ public class CuentaBancaria {
   }
 
   /**
-   * 
-   * @param p_importe Valor que se extraerá en la cuenta del banco.
-   * @return El nuevo saldo después de la extraccion en la cuenta del banco.
-   */
-  public double extraer(double p_importe) {
-    this.setSaldo(this.getSaldo() - p_importe);
-    return this.getSaldo();
-  }
-
-  /**
    * El método "mostrar" imprime el nombre, edad y saldo del titular de la cuenta
    * bancaria.
    */
   public void mostrar() {
     System.out.println("Titular: " + this.getTitular().nomYApe() + " (" + this.getTitular().edad() + " Años)");
     System.out.println("Saldo: " + this.getSaldo());
-  }
-
-  /**
-   * @return El método devuelve una representación de cadena del número de cuenta,
-   *         nombre del titular de la cuenta y saldo.
-   */
-  public String toStrinf() {
-    return this.getNroCuenta() + "\t" + this.getTitular().nomYApe() + "\t" + this.getSaldo();
   }
 }

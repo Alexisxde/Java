@@ -13,6 +13,10 @@ public abstract class Etiqueta {
     return this.costo;
   }
 
+  /**
+   * @return Una cadena de caracteres que contiene el tipo de etiqueta y costo por
+   *         unidad (String).
+   */
   public String toString() {
     return String.format("tipo %s - Costo: $%s ", this.tipo(), this.getCosto());
   }
