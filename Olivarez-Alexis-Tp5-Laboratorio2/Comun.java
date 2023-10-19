@@ -2,8 +2,8 @@ public class Comun extends Etiqueta {
   private double plus;
 
   /**
-   * @param p_costo El precio por unidad de las etiquetas común (double).
-   * @param p_plus  El plus por diseño de las etiquetas común (double).
+   * @param p_costo El precio por unidad de la etiqueta común (double).
+   * @param p_plus  El plus por diseño de la etiqueta común (double).
    */
   public Comun(double p_costo, double p_plus) {
     super(p_costo);
@@ -11,18 +11,18 @@ public class Comun extends Etiqueta {
   }
 
   /**
-   * Establece el plus por diseño de las etiquetas.
-   *
-   * @param p_plus El plus por diseño de las etiquetas (double).
+   * Establece el plus por diseño de la etiqueta.
+   * 
+   * @param p_plus El plus por diseño de la etiqueta (double).
    */
   private void setPlus(double p_plus) {
     this.plus = p_plus;
   }
 
   /**
-   * Obtiene el plus por diseño de las etiquetas.
+   * Obtiene el plus por diseño de la etiqueta.
    *
-   * @return El plus por diseño de las etiquetas (double).
+   * @return El plus por diseño de la etiqueta (double).
    */
   public double getPlus() {
     return this.plus;
@@ -31,7 +31,7 @@ public class Comun extends Etiqueta {
   /**
    * @param q La cantidad de unidades de etiquetas (int).
    * @return El precio final que deberá pagar con el descuento y con el plus de
-   *         diseño de las etiquetas.
+   *         diseño de la etiqueta (double).
    */
   @Override
   public double precio(int q) {

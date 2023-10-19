@@ -1,22 +1,40 @@
 public class Premium extends Etiqueta {
   private int colores;
 
+  /**
+   * @param p_costo   El precio por unidad de la etiqueta premium (double).
+   * @param p_colores La cantidad de colores de la etiqueta premium (double).
+   */
   public Premium(double p_costo, int p_colores) {
     super(p_costo);
     this.setColores(p_colores);
   }
 
+  /**
+   * Establece la cantidad de colores de la etiqueta.
+   * 
+   * @param p_colores La cantidad de colores de la etiqueta (double).
+   */
   private void setColores(int p_colores) {
     this.colores = p_colores;
   }
 
+  /**
+   * Obtiene la cantidad de colores de la etiqueta.
+   *
+   * @return La cantidad de colores de la etiqueta (int).
+   */
   public int getColores() {
     return this.colores;
   }
 
+  /**
+   * @param q La cantidad de unidades de etiquetas (int).
+   * @return El precio final que deberá pagar con el adicional (double).
+   */
   @Override
   public double precio(int q) {
-    return (this.getCosto() * q) + (this.adicional() * q);
+    return (this.getCosto() + this.adicional()) * q;
   }
 
   /**
@@ -27,10 +45,19 @@ public class Premium extends Etiqueta {
     return "Premium";
   }
 
+  /**
+   * @return Una cadena de caracteres que contiene el tipo de etiqueta, costo por
+   *         unidad y la cantidad de colores (String).
+   */
   public String toString() {
     return super.toString() + "- Colores: " + this.getColores();
   }
 
+  /**
+   * Adicional por cantidad de colores.
+   * 
+   * @return Devuelve el adicional.
+   */
   private double adicional() {
     int cantidadColores = this.getColores();
     if (cantidadColores == 1) {

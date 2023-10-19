@@ -2,6 +2,15 @@ import java.util.Calendar;
 
 public abstract class Visitante {
   private String nombre;
+
+  public abstract void mostrar();
+
+  public abstract double entrada();
+
+  public abstract void listarPorFecha(Calendar p_fecha, String p_visitante);
+
+  public abstract String tipoVisitante();
+
   private Calendar fechaVisita;
 
   public Visitante(String p_nombre, Calendar p_fechaVisita) {
@@ -25,11 +34,4 @@ public abstract class Visitante {
     return this.fechaVisita;
   }
 
-  public abstract void mostrar();
-
-  public abstract double entrada();
-
-  public abstract void listarPorFecha(Calendar p_fecha, String p_visitante);
-
-  public abstract String tipoVisitante();
 }

@@ -129,13 +129,6 @@ public abstract class Alojamiento {
     return this.getServicios().remove(p_servicio);
   }
 
-  // !ACA
-  /**
-   * @param p_alojamiento El tipo de alojamiento (String).
-   * @return Devuelve 1 si el tipo de alojamiento coincide con la clase que lo
-   *         contiene
-   */
-
   /**
    * Calcula el costo del alquiler del alojamiento.
    *

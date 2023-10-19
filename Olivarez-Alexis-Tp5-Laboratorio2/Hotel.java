@@ -24,17 +24,30 @@ public class Hotel extends Alojamiento {
 
   @Override
   public double costo() {
-    if (this.getTipoHabitacion() == "Simple") {
-      return super.costo() + (20 * super.getDiasAlquiler());
+    double costo = super.costo();
+    if (this.getTipoHabitacion() == "Single") {
+      costo = super.costo() + (20 * super.getDiasAlquiler());
+    } else if (this.getTipoHabitacion() == "Doble") {
+      costo = super.costo() + (35 * super.getDiasAlquiler());
     }
-    return super.costo() + (35 * super.getDiasAlquiler());
+    return costo;
   }
 
+  /**
+   * Cuenta la cantidad de alojamientos de un tipo específico.
+   *
+   * @param p_alojamiento El tipo de alojamiento que se desea contar (String).
+   * @return Devuelve 1 si el tipo de alojamiento es "Hotel" si no 0 (int).
+   */
   @Override
   public int contar(String p_alojamiento) {
     return p_alojamiento == "Hotel" ? 1 : 0;
   }
 
+  /**
+   * Imprime por pantalla el nombre del alojamiento, el costo por los dias
+   * alquilados el tipo de habitación y el total a pagar.
+   */
   public void liquidar() {
     super.liquidar();
     System.out.format("Habitacion %s\n", this.getTipoHabitacion());

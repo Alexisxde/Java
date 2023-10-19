@@ -9,7 +9,7 @@ public class AdministraciónGerencia {
     gerencia.agregarAlojamiento(cabaña);
 
     // Crea un hotel
-    Hotel hotel = new Hotel("Hotel Guaraní", 70, 7, "Simple");
+    Hotel hotel = new Hotel("Hotel Guaraní", 70, 7, "Single");
     hotel.agregarServicio(new Servicio("Internet", 5));
     hotel.agregarServicio(new Servicio("Alquiler de auto", 100));
     gerencia.agregarAlojamiento(hotel);

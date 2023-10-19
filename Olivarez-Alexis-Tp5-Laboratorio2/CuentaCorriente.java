@@ -30,7 +30,7 @@ public class CuentaCorriente extends CuentaBancaria {
    * El método establece el valor de la variable "limiteDescubierto" proporcionado
    * del valor "p_limiteDescubierto".
    * 
-   * @param p_limiteDescubierto // ?
+   * @param p_limiteDescubierto Representa la cantidad que te presta la cuenta.
    */
   private void setLimiteDescubierto(double p_limiteDescubierto) {
     this.limiteDescubierto = p_limiteDescubierto;

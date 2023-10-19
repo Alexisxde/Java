@@ -85,6 +85,6 @@ public abstract class ArtefactoHogar {
    * @return Devuelve la cuota mensual a pagar del crédito (float).
    */
   public float cuotaCredito(int p_cuotas, float p_interes) {
-    return (this.getPrecio() + (this.getPrecio() * p_interes)) / p_cuotas;
+    return (this.getPrecio() + (this.getPrecio() * (p_interes / 100))) / p_cuotas;
   }
 }
