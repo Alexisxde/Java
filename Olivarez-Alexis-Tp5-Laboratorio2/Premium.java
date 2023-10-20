@@ -56,17 +56,18 @@ public class Premium extends Etiqueta {
   /**
    * Adicional por cantidad de colores.
    * 
-   * @return Devuelve el adicional.
+   * @return Devuelve el adicional (double).
    */
   private double adicional() {
+    double adicional = 0;
     int cantidadColores = this.getColores();
-    if (cantidadColores == 1) {
-      return 0;
-    } else if (cantidadColores == 2) {
-      return super.getCosto() * 0.05;
+    if (cantidadColores == 2) {
+      adicional = super.getCosto() * 0.05;
     } else if (cantidadColores == 3) {
-      return super.getCosto() * 0.07;
+      adicional = super.getCosto() * 0.07;
+    } else if (cantidadColores > 3) {
+      adicional = super.getCosto() * 0.03 * cantidadColores;
     }
-    return super.getCosto() * 0.03 * cantidadColores;
+    return adicional;
   }
 }

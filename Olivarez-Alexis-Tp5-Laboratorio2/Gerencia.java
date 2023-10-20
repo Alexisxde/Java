@@ -5,6 +5,8 @@ public class Gerencia {
   private ArrayList<Alojamiento> alojamientoAlquilados;
 
   /**
+   * Constructor de la clase Gerencia.
+   * 
    * @param p_nombre El nombre de la gerencia (String).
    */
   public Gerencia(String p_nombre) {
@@ -13,6 +15,8 @@ public class Gerencia {
   }
 
   /**
+   * Constructor de la clase Gerencia.
+   * 
    * @param p_nombre                El nombre de la gerencia (String).
    * @param p_alojamientoAlquilados Una lista de alojamientos
    *                                (ArrayList<Alojamiento>).

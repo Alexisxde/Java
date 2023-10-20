@@ -29,7 +29,7 @@ public class CuentaBancaria {
   }
 
   /**
-   * El método establece el valor de la variable "nroCuenta" proporcionado del
+   * Establece el valor de la variable "nroCuenta" proporcionado del
    * valor
    * "p_nroCuenta".
    * 
@@ -41,7 +41,7 @@ public class CuentaBancaria {
   }
 
   /**
-   * El método establece el valor de la variable "titular" proporcionado del valor
+   * Establece el valor de la variable "titular" proporcionado del valor
    * "p_titular".
    * 
    * @param p_titular Es un valor doble que representa el nuevo valor de la
@@ -52,7 +52,7 @@ public class CuentaBancaria {
   }
 
   /**
-   * El método establece el valor de la variable "saldo" proporcionado del valor
+   * Establece el valor de la variable "saldo" proporcionado del valor
    * "p_saldo".
    * 
    * @param p_saldo Es un valor doble que representa el nuevo valor de la variable
@@ -103,7 +103,7 @@ public class CuentaBancaria {
   }
 
   /**
-   * El método "mostrar" imprime el nombre, edad y saldo del titular de la cuenta
+   * Imprime el nombre, edad y saldo del titular de la cuenta
    * bancaria.
    */
   public void mostrar() {

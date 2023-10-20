@@ -10,7 +10,7 @@ public class CuentaCorriente extends CuentaBancaria {
    */
   public CuentaCorriente(int p_nroCuenta, Persona p_titular) {
     super(p_nroCuenta, p_titular);
-    this.setLimiteDescubierto(500);
+    this.setLimiteDescubierto(10);
   }
 
   /**
@@ -23,11 +23,11 @@ public class CuentaCorriente extends CuentaBancaria {
    */
   public CuentaCorriente(int p_nroCuenta, double p_saldo, Persona p_titular) {
     super(p_nroCuenta, p_titular, p_saldo);
-    this.setLimiteDescubierto(500);
+    this.setLimiteDescubierto(10);
   }
 
   /**
-   * El método establece el valor de la variable "limiteDescubierto" proporcionado
+   * Establece el valor de la variable "limiteDescubierto" proporcionado
    * del valor "p_limiteDescubierto".
    * 
    * @param p_limiteDescubierto Representa la cantidad que te presta la cuenta.
@@ -44,12 +44,12 @@ public class CuentaCorriente extends CuentaBancaria {
   }
 
   /**
-   * El método "puedeExtraer" verifica si el monto dado se puede retirar de la
-   * cuenta sin exceder el límite de saldo.
+   * Verifica si el monto dado se puede retirar de la cuenta sin exceder el límite
+   * de saldo.
    *
    * @param p_importe Representa la cantidad de dinero que el usuario desea
    *                  retirar de su cuenta.
-   * @return El método devuelve un valor booleano.
+   * @return Devuelve un valor booleano.
    */
   private boolean puedeExtraer(double p_importe) {
     return p_importe <= this.getSaldo() + this.getLimiteDescubierto();
@@ -61,38 +61,37 @@ public class CuentaCorriente extends CuentaBancaria {
    */
   @Override
   public boolean extraer(double p_importe) {
+    boolean puedeExtraer = false;
     if (p_importe <= super.getSaldo()) {
-      return super.extraer(p_importe);
+      puedeExtraer = super.extraer(p_importe);
     } else if (this.puedeExtraer(p_importe)) {
       this.setLimiteDescubierto(this.getLimiteDescubierto() - (p_importe - super.getSaldo()));
       super.setSaldo(0);
-      return true;
+      puedeExtraer = true;
     }
-    return false;
+    return puedeExtraer;
   }
 
   /**
-   * 
    * @param p_importe Nuevo valor que se deposita en la cuenta del banco.
    * @return El nuevo saldo después del deposito en la cuenta del banco.
    */
   @Override
   public double depositar(double p_importe) {
-    double debe = 0,
-        aux = 0;
-    if (this.getLimiteDescubierto() <= 500) {
+    double debe = 0;
+    double saldoFinal = 0;
+    if (this.getLimiteDescubierto() < 500) {
       debe = 500 - this.getLimiteDescubierto();
-      aux = p_importe - aux;
+      saldoFinal = p_importe - debe;
       this.setLimiteDescubierto(this.getLimiteDescubierto() + debe);
-      super.depositar(aux);
-      return aux;
+      return super.depositar(saldoFinal);
     }
     return super.depositar(p_importe);
   }
 
   /**
-   * El método "mostrar" imprime el número de cuenta, el saldo, el titular, su
-   * descubierto de la cuenta bancaria.
+   * Imprime el número de cuenta, el saldo, el titular, su descubierto de la
+   * cuenta bancaria.
    */
   public void mostrar() {
     System.out.println("- Cuenta Corriente -");

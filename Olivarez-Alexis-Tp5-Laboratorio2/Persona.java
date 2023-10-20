@@ -40,7 +40,7 @@ public class Persona {
   }
 
   /**
-   * El método establece el valor de la variable "nroDni" proporcionado del valor
+   * Establece el valor de la variable "nroDni" proporcionado del valor
    * "p_dni".
    * 
    * @param p_dni Es un valor entero que representa el DNI
@@ -51,7 +51,7 @@ public class Persona {
   }
 
   /**
-   * El método establece el valor de la variable "nombre" proporcionado del valor
+   * Establece el valor de la variable "nombre" proporcionado del valor
    * "p_nombre".
    *
    * @param p_nombre Es un String que representa el nuevo valor para la variable
@@ -63,7 +63,7 @@ public class Persona {
   }
 
   /**
-   * El método establece el valor de la variable "apellido" proporcionado del
+   * Establece el valor de la variable "apellido" proporcionado del
    * valor "p_apellido".
    *
    * @param p_apellido Es un String que representa el nuevo valor para la variable
@@ -75,7 +75,7 @@ public class Persona {
   }
 
   /**
-   * El método establece el valor de la variable "fechaNacimiento" proporcionado
+   * Establece el valor de la variable "fechaNacimiento" proporcionado
    * del valor "p_fechaNacimiento".
    *
    * @param p_fechaNacimiento Es un tipo Calendar que
@@ -115,7 +115,7 @@ public class Persona {
   }
 
   /**
-   * El método "edad" Calcula la diferencia entre año actual y año de nacimiento
+   * Calcula la diferencia entre año actual y año de nacimiento
    * de una persona.
    *
    * @return Devuelve la edad actual de la persona.
@@ -127,7 +127,7 @@ public class Persona {
   }
 
   /**
-   * El método "nomYApe" Concatena el "nombre" y el "apellido".
+   * Concatena el "nombre" y el "apellido".
    *
    * @return Devuelve una cadena de caracteres de las variables
    *         "nombre" y "apellido" con un espacio entremedio.
@@ -137,7 +137,7 @@ public class Persona {
   }
 
   /**
-   * El método "apeYNom" Concatena el "apellido" y el "nombre".
+   * Concatena el "apellido" y el "nombre".
    *
    * @return Devuelve una cadena de caracteres de las variables
    *         "apellido" y "nombre" con un espacio entremedio.
@@ -147,8 +147,7 @@ public class Persona {
   }
 
   /**
-   * El método "mostrar" Muestra información de la persona, nombre y apellido, DNI
-   * y la edad.
+   * Muestra información de la persona, nombre y apellido, DNI y la edad.
    */
   public void mostrar() {
     System.out.println("Nombre y Apellido: " + this.nomYApe());
@@ -156,10 +155,9 @@ public class Persona {
   }
 
   /**
-   * El método "esCumpleanios" comprueba si la fecha actual es la misma que la
-   * fecha de nacimiento.
+   * Comprueba si la fecha actual es la misma que la fecha de nacimiento.
    *
-   * @return El método devuelve un valor booleano.
+   * @return Devuelve un valor booleano.
    */
   public boolean esCumpleanios() {
     Calendar fechaActual = Calendar.getInstance();

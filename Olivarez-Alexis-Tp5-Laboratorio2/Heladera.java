@@ -3,6 +3,14 @@ public class Heladera extends ArtefactoHogar {
   private int puertas;
   private boolean compresor;
 
+  /**
+   * @param p_marca     La marca de la heladera (String).
+   * @param p_precio    El precio de la heladera (float).
+   * @param p_stock     La cantidad de heladeras que hay en stock (int).
+   * @param p_pies      La cantidad de pies de la heladera (int).
+   * @param p_puertas   La cantidad de puertas de la heladera (int).
+   * @param p_compresor Si tiene compresor o no la heladera (boolean).
+   */
   public Heladera(String p_marca, float p_precio, int p_stock, int p_pies, int p_puertas, boolean p_compresor) {
     super(p_marca, p_precio, p_stock);
     this.setPies(p_pies);
@@ -38,18 +46,18 @@ public class Heladera extends ArtefactoHogar {
   }
 
   /**
-   * Obtiene los pies de la heladera.
+   * Obtiene la cantidad de pies de la heladera.
    *
-   * @return Los pies de la heladera (int).
+   * @return La cantidad de pies de la heladera (int).
    */
   public int getPies() {
     return this.pies;
   }
 
   /**
-   * Obtiene las puertas de la heladera.
+   * Obtiene la cantidad de puertas de la heladera.
    *
-   * @return Las puertas de la heladera (int).
+   * @return La cantidad de puertas de la heladera (int).
    */
   public int getPuertas() {
     return this.puertas;
@@ -65,8 +73,8 @@ public class Heladera extends ArtefactoHogar {
   }
 
   /**
-   * Imprime por pantalla el nombre, la marca, el precio y el stock de un
-   * electrodoméstico y sus caracteristicas (pies, puertas y si tiene compresor).
+   * Imprime por pantalla el nombre, la marca, el precio y el stock de la heladera
+   * y sus caracteristicas (pies, puertas y si tiene compresor).
    */
   @Override
   public void imprimir() {
@@ -78,7 +86,7 @@ public class Heladera extends ArtefactoHogar {
   }
 
   /**
-   * Calcula la cuota mensual de un crédito para un electrodoméstico.
+   * Calcula la cuota mensual de un crédito para la heladera con $50 adicional.
    *
    * @param p_cuotas  El número de cuotas en las que se dividirá el crédito (int).
    * @param p_interes El interés aplicado al crédito (float).
@@ -92,5 +100,4 @@ public class Heladera extends ArtefactoHogar {
     }
     return valorCuota;
   }
-
 }

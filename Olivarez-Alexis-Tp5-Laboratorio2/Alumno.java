@@ -38,7 +38,7 @@ public class Alumno extends Persona {
   }
 
   /**
-   * El método establece el valor de la variable "lu" proporcionado del valor
+   * Establece el valor de la variable "lu" proporcionado del valor
    * "p_lu".
    * 
    * @param p_lu Es un valor entero que representa el Lu
@@ -49,7 +49,7 @@ public class Alumno extends Persona {
   }
 
   /**
-   * El método establece el valor de la variable "nota1" proporcionado
+   * Establece el valor de la variable "nota1" proporcionado
    * del valor "p_nota1".
    *
    * @param p_nota1 Es un número entero que
@@ -60,7 +60,7 @@ public class Alumno extends Persona {
   }
 
   /**
-   * El método establece el valor de la variable "nota2" proporcionado
+   * Establece el valor de la variable "nota2" proporcionado
    * del valor "p_nota2".
    *
    * @param p_nota2 Es un número entero que
@@ -92,7 +92,7 @@ public class Alumno extends Persona {
   }
 
   /**
-   * El método calcula el promedio entre las dos notas.
+   * Calcula el promedio entre las dos notas.
    * 
    * @return El promedio de dos números, que se obtienen usando los
    *         métodos "getNota1()" y "getNota2()".
@@ -102,7 +102,7 @@ public class Alumno extends Persona {
   }
 
   /**
-   * El método "aprueba" Devuelve verdadero si la calificación promedio es mayor a
+   * Devuelve verdadero si la calificación promedio es mayor a
    * 7 y ambas notas individuales son mayores o iguales a 6.
    * 
    * @return Un valor Boolean(true o false).
@@ -121,7 +121,7 @@ public class Alumno extends Persona {
   }
 
   /**
-   * El método "mostrar" Muestra información del alumno, nombre, apellido, dni,
+   * Muestra información del alumno, nombre, apellido, dni,
    * edad, LU, sus dos notas y el promedio de esas notas.
    */
   public void mostrar() {

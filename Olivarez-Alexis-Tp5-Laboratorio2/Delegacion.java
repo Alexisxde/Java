@@ -88,7 +88,7 @@ public class Delegacion extends Visitante {
   }
 
   /**
-   * El método "mostrar" imprime el nombre de la delegación, una lista de los
+   * Imprime el nombre de la delegación, una lista de los
    * integrantes y la cantidad de integrantes.
    */
   @Override

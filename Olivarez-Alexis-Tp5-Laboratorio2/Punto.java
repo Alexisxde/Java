@@ -26,7 +26,7 @@ public class Punto {
   }
 
   /**
-   * El método establece el valor de la variable "x" proporcionado del valor
+   * Establece el valor de la variable "x" proporcionado del valor
    * "p_x".
    * 
    * @param p_x Es un valor doble que representa el nuevo valor de la variable
@@ -37,7 +37,7 @@ public class Punto {
   }
 
   /**
-   * El método establece el valor de la variable "y" proporcionado del valor
+   * Establece el valor de la variable "y" proporcionado del valor
    * "p_y".
    * 
    * @param p_y Es un valor doble que representa el nuevo valor de la variable
@@ -62,7 +62,7 @@ public class Punto {
   }
 
   /**
-   * El método "desplazar" Actualiza las coordenadas de las variables "x" e "y"
+   * Actualiza las coordenadas de las variables "x" e "y"
    * sumando los valores pasados como parámetros.
    *
    * @param p_x La cantidad en la que el objeto debe moverse horizontalmente.
@@ -74,8 +74,7 @@ public class Punto {
   }
 
   /**
-   * El método "coordenadas" Devuelve una cadena de caracteres de las coordenadas
-   * (x, y).
+   * Devuelve una cadena de caracteres de las coordenadas (x, y).
    *
    * @return Devuelve una cadena de caracteres de las coordenadas en el formato
    *         "(x, y)".
@@ -85,7 +84,7 @@ public class Punto {
   }
 
   /**
-   * El método "mostrar" Muestra las coordenadas "x" e "y" del punto.
+   * Muestra las coordenadas "x" e "y" del punto.
    */
   public void mostrar() {
     System.out.println("Punto. X: " + this.getX() + ", Y: " + this.getY());

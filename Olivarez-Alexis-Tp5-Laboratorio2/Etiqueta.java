@@ -37,5 +37,4 @@ public abstract class Etiqueta {
   public String toString() {
     return String.format("tipo %s - Costo: $%s ", this.tipo(), this.getCosto());
   }
-
 }

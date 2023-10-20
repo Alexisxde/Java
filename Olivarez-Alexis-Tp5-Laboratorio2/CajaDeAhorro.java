@@ -28,9 +28,8 @@ public class CajaDeAhorro extends CuentaBancaria {
   }
 
   /**
-   * El método establece el valor de la variable "extraccionesPosibles"
-   * proporcionado del valor
-   * "p_extraccionesPosibles".
+   * Establece el valor de la variable "extraccionesPosibles" proporcionado del
+   * valor "p_extraccionesPosibles".
    * 
    * @param p_extraccionesPosibles Es un valor doble que representa el nuevo valor
    *                               de la variable "extraccionesPosibles".
@@ -47,14 +46,13 @@ public class CajaDeAhorro extends CuentaBancaria {
   }
 
   /**
-   * El método "puedeExtraer" verifica si el monto dado se puede retirar de la
-   * cuenta sin
-   * exceder el límite de saldo.
+   * Verifica si el monto dado se puede retirar de la cuenta sin exceder el límite
+   * de saldo.
    *
    * @param p_importe Representa la cantidad de dinero que el usuario desea
    *                  retirar
    *                  de su cuenta.
-   * @return El método devuelve un valor booleano.
+   * @return Devuelve un valor booleano.
    */
   private boolean puedeExtraer(double p_importe) {
     return p_importe < this.getSaldo() && this.getExtraccionesPosibles() > 0;
@@ -73,8 +71,8 @@ public class CajaDeAhorro extends CuentaBancaria {
   }
 
   /**
-   * El método "mostrar" imprime el número de cuenta, el saldo, el titular y sus
-   * extracciones disponibles de la cuenta bancaria.
+   * Imprime el número de cuenta, el saldo, el titular y sus extracciones
+   * disponibles de la cuenta bancaria.
    */
   public void mostrar() {
     System.out.println("- Caja de Ahorro -");
@@ -87,12 +85,14 @@ public class CajaDeAhorro extends CuentaBancaria {
    * @return Un String que avisa si puede extraer o no.
    */
   public String xQNoPuedeExtraer(double p_importe) {
+    String mensaje;
     if (this.puedeExtraer(p_importe)) {
-      return "Si puede extraer\n";
+      mensaje = "Si puede extraer\n";
     } else if (this.getExtraccionesPosibles() == 0) {
-      return "No tiene habilitadas mas extracciones!\n";
+      mensaje = "No tiene habilitadas más extracciones!\n";
     } else {
-      return "No puede extraer mas que el saldo!\n";
+      mensaje = "No puede extraer más que el saldo!\n";
     }
+    return mensaje;
   }
 }

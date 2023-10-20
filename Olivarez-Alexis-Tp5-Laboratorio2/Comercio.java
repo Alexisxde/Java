@@ -10,7 +10,7 @@ public class Comercio {
 
   public static void informeCuotas(ArtefactoHogar p_artefactoHogar, int p_cuotas, float p_interes) {
     p_artefactoHogar.imprimir();
-    System.out.format("Cuotas: %s - Interés: %s%%\n", p_cuotas, p_interes * 100);
+    System.out.format("Cuotas: %s - Interés: %s%%\n", p_cuotas, p_interes);
     double valorCuotaHeladera = p_artefactoHogar.cuotaCredito(p_cuotas, p_interes);
     double valorCuotaConAdicionalesHeladera = p_artefactoHogar.creditoConAdicional(p_cuotas, p_interes);
     System.out.format("Valor Cuota: %.2f\n", valorCuotaHeladera);

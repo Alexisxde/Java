@@ -35,7 +35,7 @@ public class Comun extends Etiqueta {
    */
   @Override
   public double precio(int q) {
-    return (super.getCosto() * q) - this.descuento(q) + this.getPlus();
+    return (super.getCosto() * q) + this.getPlus() - this.descuento(q);
   }
 
   /**
@@ -62,13 +62,23 @@ public class Comun extends Etiqueta {
    * @return Devuelve el descuento.
    */
   private double descuento(int q) {
-    if (q <= 10) {
-      return 0;
-    } else if (q <= 51) {
-      return super.getCosto() * q * 0.02;
-    } else if (q <= 100) {
-      return super.getCosto() * q * 0.05;
+    double descuento = 0;
+    if (q > 11) {
+      if (q < 50) {
+        descuento = this.getCosto() * q * 0.02;
+      } else if (q < 100) {
+        descuento = this.getCosto() * q * 0.05;
+      } else {
+        descuento = this.getCosto() * q * 0.01 * (int) (q / 10);
+      }
     }
-    return super.getCosto() * q * 0.01 * (int) (q / 10);
+    // if (q > 11 && q < 50) {
+    // descuento = super.getCosto() * q * 0.02;
+    // } else if (q > 51 && q < 100) {
+    // descuento = super.getCosto() * q * 0.05;
+    // } else if (q > 100) {
+    // descuento = super.getCosto() * q * 0.01 * (int) (q / 10);
+    // }
+    return descuento;
   }
 }

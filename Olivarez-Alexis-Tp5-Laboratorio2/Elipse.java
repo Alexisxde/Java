@@ -1,7 +1,6 @@
 public class Elipse extends FiguraGeometrica {
   private double sEjeMayor;
   private double sEjeMenor;
-  // private Punto centro;
 
   public Elipse(double p_sEjeMayor, double p_sEjeMenor, Punto p_centro) {
     super(p_centro);
@@ -9,24 +8,23 @@ public class Elipse extends FiguraGeometrica {
     this.setsEjeMenor(p_sEjeMenor);
   }
 
+  /**
+   * Establece el eje mayor del elipse.
+   * 
+   * @param p_sEjeMayor El eje mayor del elipse (double).
+   */
   private void setsEjeMayor(double p_sEjeMayor) {
     this.sEjeMayor = p_sEjeMayor;
   }
 
+  /**
+   * Establece el eje menor del elipse.
+   * 
+   * @param p_sEjeMenor El eje menor del elipse (double).
+   */
   private void setsEjeMenor(double p_sEjeMenor) {
     this.sEjeMenor = p_sEjeMenor;
   }
-
-  // /**
-  // * El método establece del atributo "centro" proporcionado del
-  // * valor "p_centro".
-  // *
-  // * @param p_centro Es un valor Objeto Punto que representa el nuevo valor del
-  // * atributo "centro".
-  // */
-  // private void setCentro(Punto p_centro) {
-  // this.centro = p_centro;
-  // }
 
   /**
    * Obtiene el valor del eje mayor de la elipse.
@@ -45,15 +43,6 @@ public class Elipse extends FiguraGeometrica {
   public double getsEjeMenor() {
     return this.sEjeMenor;
   }
-
-  // /**
-  // * Obtiene el centro del círculo.
-  // *
-  // * @return El centro del círculo (Punto).
-  // */
-  // public Punto getCentro() {
-  // return this.centro;
-  // }
 
   /**
    * @return Un String del nombre de la figura "Elipse" (String).
@@ -87,7 +76,7 @@ public class Elipse extends FiguraGeometrica {
   }
 
   /**
-   * El método desplaza la Elipse en los valores pasados como parámetros.
+   * Se desplaza la Elipse en los valores pasados como parámetros.
    *
    * @param p_x La cantidad en la que el objeto debe moverse horizontalmente.
    * @param p_y La cantidad en la que el objeto debe moverse verticalmente.

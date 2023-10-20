@@ -7,7 +7,7 @@ public class Banco {
     fechaNacimiento.set(2000, Calendar.SEPTEMBER, 8);
 
     Persona cliente = new Persona(44, "Juan", "Perez", fechaNacimiento);
-    CuentaCorriente cuenta = new CuentaCorriente(1, 1500, cliente);
+    CuentaCorriente cuenta = new CuentaCorriente(1, 0, cliente);
     CajaDeAhorro caja = new CajaDeAhorro(1, 1500, cliente);
 
     if (cliente.esCumpleanios()) {

@@ -45,7 +45,7 @@ public class Empleado extends Persona {
   }
 
   /**
-   * El método establece el valor de la variable "cuil" proporcionado del valor
+   * Establece el valor de la variable "cuil" proporcionado del valor
    * "p_cuil".
    * 
    * @param p_cuil Es un valor entero que representa el cuil del empleado.
@@ -55,7 +55,7 @@ public class Empleado extends Persona {
   }
 
   /**
-   * El método establece el valor de la variable "sueldoBasico" proporcionado del
+   * Establece el valor de la variable "sueldoBasico" proporcionado del
    * valor "p_sueldoBasico".
    *
    * @param p_sueldoBasico Es un número doble que representa el nuevo valor para
@@ -67,7 +67,7 @@ public class Empleado extends Persona {
   }
 
   /**
-   * El método establece el valor de la variable "fechaIngreso" proporcionado
+   * Establece el valor de la variable "fechaIngreso" proporcionado
    * del valor "p_fechaIngreso".
    *
    * @param p_fechaIngreso fecha de cuando ingreso el empleado a la empresa.
@@ -77,7 +77,7 @@ public class Empleado extends Persona {
   }
 
   /**
-   * El método establece el valor de la variable "anioIngreso" proporcionado
+   * Establece el valor de la variable "anioIngreso" proporcionado
    * del valor "p_anioIngreso".
    *
    * @param p_anioIngreso Es un número entero que representa el año de que ingreso
@@ -119,7 +119,7 @@ public class Empleado extends Persona {
   }
 
   /**
-   * El método "antiguedad" Calcula la diferencia entre año actual y año de que
+   * Calcula la diferencia entre año actual y año de que
    * ingreso el empleado.
    *
    * @return Devuelve la cantidad de años de servicio.
@@ -133,7 +133,7 @@ public class Empleado extends Persona {
   }
 
   /**
-   * El método "descuento" Calcula el monto total del descuento sumando la
+   * Calcula el monto total del descuento sumando la
    * contribución al seguro médico y el importe fijo para el seguro de vida.
    *
    * @return Devuelve la suma de las variables locales "obraSocial" y
@@ -146,7 +146,7 @@ public class Empleado extends Persona {
   }
 
   /**
-   * El método "sueldoNeto" Calcula el sueldo neto del empleado sumando el salario
+   * Calcula el sueldo neto del empleado sumando el salario
    * básico, el monto adicional, y restando el monto del descuento.
    *
    * @return Devuelve el salario neto.
@@ -156,7 +156,7 @@ public class Empleado extends Persona {
   }
 
   /**
-   * El método "adicional" Calcula el monto adicional en función de los años de
+   * Calcula el monto adicional en función de los años de
    * servicio del empleado.
    *
    * @return Devuelve la cantidad adicional basada en los años de antigüedad del
@@ -172,7 +172,7 @@ public class Empleado extends Persona {
   }
 
   /**
-   * El método "mostrar" Muestra el nombre y apellido, CUIL, años de servicio y
+   * Muestra el nombre y apellido, CUIL, años de servicio y
    * salario neto del empleado.
    */
   public void mostrar() {
@@ -183,7 +183,7 @@ public class Empleado extends Persona {
   }
 
   /**
-   * El método "mostrarLinea" Concatena el CUIL, apellido, nombre y salario neto.
+   * Concatena el CUIL, apellido, nombre y salario neto.
    *
    * @return Devuelve una cadena de caracteres que contiene el CUIL, apellido,
    *         nombre y sueldo neto.
