@@ -49,6 +49,7 @@ public class Premium extends Etiqueta {
    * @return Una cadena de caracteres que contiene el tipo de etiqueta, costo por
    *         unidad y la cantidad de colores (String).
    */
+  @Override
   public String toString() {
     return super.toString() + "- Colores: " + this.getColores();
   }

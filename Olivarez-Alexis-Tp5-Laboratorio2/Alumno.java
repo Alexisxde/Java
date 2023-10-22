@@ -124,6 +124,7 @@ public class Alumno extends Persona {
    * Muestra información del alumno, nombre, apellido, dni,
    * edad, LU, sus dos notas y el promedio de esas notas.
    */
+  @Override
   public void mostrar() {
     super.mostrar();
     System.out.format("LU: %s\tNotas: %s - %s\n", this.getLu(), this.getNota1(), this.getNota2());

@@ -64,6 +64,7 @@ public class Exclusivo extends Cargo {
    * básico, sueldo del cargo, antigüedad, horas de docencia, horas de
    * investigación y horas de extensión.
    */
+  @Override
   public void mostrarCargo() {
     super.mostrarCargo();
     System.out.println("---- Cargo de caracter Exclusivo ----");

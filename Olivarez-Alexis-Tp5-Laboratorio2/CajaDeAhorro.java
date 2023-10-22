@@ -62,18 +62,21 @@ public class CajaDeAhorro extends CuentaBancaria {
    * @param p_importe Valor que se extraerá en la cuenta del banco.
    * @return Si se pudo extraer o no (boolean).
    */
+  @Override
   public boolean extraer(double p_importe) {
-    if (!this.puedeExtraer(p_importe)) {
-      return false;
+    boolean puedeExtraer = false;
+    if (this.puedeExtraer(p_importe)) {
+      this.setExtraccionesPosibles(this.getExtraccionesPosibles() - 1);
+      puedeExtraer = super.extraer(p_importe);
     }
-    this.setExtraccionesPosibles(this.getExtraccionesPosibles() - 1);
-    return super.extraer(p_importe);
+    return puedeExtraer;
   }
 
   /**
    * Imprime el número de cuenta, el saldo, el titular y sus extracciones
    * disponibles de la cuenta bancaria.
    */
+  @Override
   public void mostrar() {
     System.out.println("- Caja de Ahorro -");
     super.mostrar();

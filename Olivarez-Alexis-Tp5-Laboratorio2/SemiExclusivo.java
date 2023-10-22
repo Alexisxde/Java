@@ -44,6 +44,7 @@ public class SemiExclusivo extends Cargo {
    * básico, sueldo del cargo, antigüedad, horas de docencia y horas de
    * investigación.
    */
+  @Override
   public void mostrarCargo() {
     super.mostrarCargo();
     System.out.println("---- Cargo de caracter SemiExclusivo ----");

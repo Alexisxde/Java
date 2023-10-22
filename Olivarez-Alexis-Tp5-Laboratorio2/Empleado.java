@@ -175,6 +175,7 @@ public class Empleado extends Persona {
    * Muestra el nombre y apellido, CUIL, años de servicio y
    * salario neto del empleado.
    */
+  @Override
   public void mostrar() {
     super.mostrar();
     System.out

@@ -93,6 +93,7 @@ public class CuentaCorriente extends CuentaBancaria {
    * Imprime el número de cuenta, el saldo, el titular, su descubierto de la
    * cuenta bancaria.
    */
+  @Override
   public void mostrar() {
     System.out.println("- Cuenta Corriente -");
     super.mostrar();

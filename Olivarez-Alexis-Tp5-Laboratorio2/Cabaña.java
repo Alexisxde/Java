@@ -61,7 +61,7 @@ public class Cabaña extends Alojamiento {
   /**
    * Cuenta la cantidad de alojamientos de un tipo específico.
    *
-   * @param p_alojamiento El tipo de alojamiento que se desea contar (String).
+   * @param p_alojamiento El tipo de alojamiento que se desea contar .
    * @return Devuelve 1 si el tipo de alojamiento es "Cabaña" si no 0 (int).
    */
   @Override
@@ -74,6 +74,7 @@ public class Cabaña extends Alojamiento {
    * alquilados, la lista de todos los servicios alquilados, la cantidad de
    * habitaciones y el total a pagar.
    */
+  @Override
   public void liquidar() {
     super.liquidar();
     System.out.format("Cabaña con %s habitaciones\n", this.getNroHabitaciones());

@@ -88,6 +88,7 @@ public class Profesor extends Persona {
    * Muestra los detalles del profesor, incluyendo su información personal,
    * título, lista de cargos asignados y sueldo total.
    */
+  @Override
   public void mostrar() {
     super.mostrar();
     System.out.format("Titulo: %s\n", this.getTitulo());

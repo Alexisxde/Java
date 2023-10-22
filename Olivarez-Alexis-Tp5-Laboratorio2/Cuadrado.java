@@ -33,6 +33,7 @@ public class Cuadrado extends Rectangulo {
   /**
    * @return Un String del nombre de la figura "Cuadrado" (String).
    */
+  @Override
   public String nombreFigura() {
     return "****** Cuadrado ******";
   }
