@@ -83,12 +83,9 @@ public class Zoologico {
    * @param p_fecha         La fecha a buscar quienes asistieron (Calendar).
    * @param p_tipoVisitante El tipo de visitante (String).
    */
-  public void listaTipoVisitante(Calendar p_fecha, String p_tipoVisitante) {
+  public void listaTipoVisitantePorFecha(Calendar p_fecha, String p_tipoVisitante) {
     for (Visitante visitante : this.getVisitantes()) {
-      int posteriorFecha = visitante.getFechaVisita().compareTo(p_fecha);
-      visitante.getFechaVisita().after(p_fecha);
-      visitante.getFechaVisita().before(p_fecha);
-      if (visitante.tipoVisitante() == p_tipoVisitante && posteriorFecha > 0) {
+      if (visitante.tipoVisitante() == p_tipoVisitante && visitante.getFechaVisita().equals(p_fecha)) {
         visitante.mostrar();
       }
     }
@@ -108,7 +105,6 @@ public class Zoologico {
   }
 
   /**
-   * 
    * @param p_fechaDesde La fecha desde cuando se buscará quienes asistieron al
    *                     zoologico (Calendar).
    * @param p_fechaHasta La fecha hasta cuando se buscará quienes asistieron al

@@ -111,10 +111,9 @@ public class Facultad {
    */
   public void listarProfesorCargos() {
     System.out.println("***** Detalle de Profesores y cargos de Facultad: FaCENA *****");
-    System.out.println("----------------------------------------------------------------------");
     for (Profesor profesor : this.getProfesores()) {
+      System.out.println("------------------ **** -------------------");
       profesor.mostrar();
-      System.out.println("\n------------------ **** -------------------");
     }
     System.out.println("----------------------------------------------------------------------");
     System.out.format("Hay %s profesores\n", this.getProfesores().size());

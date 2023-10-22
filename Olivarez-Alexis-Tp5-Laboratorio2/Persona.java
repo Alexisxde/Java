@@ -151,7 +151,7 @@ public class Persona {
    */
   public void mostrar() {
     System.out.println("Nombre y Apellido: " + this.nomYApe());
-    System.out.println("DNI: " + this.getDni() + " " + "Edad: " + this.edad());
+    System.out.println("DNI: " + this.getDni() + " " + "Edad: " + this.edad() + " años");
   }
 
   /**

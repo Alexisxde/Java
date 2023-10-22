@@ -111,7 +111,7 @@ public class Cargo {
    * @return El adicional por antigüedad en el sueldo básico (double).
    */
   private double adicionalXAntiguedad() {
-    return this.getSueldoBasico() * (this.antiguedad() * 0.01);
+    return this.getSueldoBasico() * this.antiguedad() * 0.01;
   }
 
   /**

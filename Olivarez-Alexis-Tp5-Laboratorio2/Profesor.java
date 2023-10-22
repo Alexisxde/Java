@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class Profesor extends Persona {
   private String titulo;
@@ -6,17 +7,35 @@ public class Profesor extends Persona {
 
   /**
    * Constructor para crear un objeto Profesor con un título, DNI, nombre,
-   * apellido, año de ingreso y un cargo inicial.
+   * apellido, año de nacimiento y un cargo inicial.
    *
-   * @param p_titulo      Título del profesor (String).
-   * @param p_dni         DNI del profesor (int).
-   * @param p_nombre      Nombre del profesor (String).
-   * @param p_apellido    Apellido del profesor (String).
-   * @param p_anioIngreso Año de ingreso del profesor (int).
-   * @param p_cargo       Cargo inicial asignado al profesor (Cargo).
+   * @param p_titulo         Título del profesor (String).
+   * @param p_dni            DNI del profesor (int).
+   * @param p_nombre         Nombre del profesor (String).
+   * @param p_apellido       Apellido del profesor (String).
+   * @param p_anioNacimiento Año de ingreso del profesor (int).
+   * @param p_cargo          Cargo inicial asignado al profesor (Cargo).
    */
-  public Profesor(String p_titulo, int p_dni, String p_nombre, String p_apellido, int p_anioIngreso, Cargo p_cargo) {
-    super(p_dni, p_nombre, p_apellido, p_anioIngreso);
+  public Profesor(String p_titulo, int p_dni, String p_nombre, String p_apellido, int p_anioNacimiento, Cargo p_cargo) {
+    super(p_dni, p_nombre, p_apellido, p_anioNacimiento);
+    this.setTitulo(p_titulo);
+    this.agregarCargo(p_cargo);
+  }
+
+  /**
+   * Constructor para crear un objeto Profesor con un título, DNI, nombre,
+   * apellido, año de nacimiento y un cargo inicial.
+   *
+   * @param p_titulo          Título del profesor (String).
+   * @param p_dni             DNI del profesor (int).
+   * @param p_nombre          Nombre del profesor (String).
+   * @param p_apellido        Apellido del profesor (String).
+   * @param p_fechaNacimiento Fecha de nacimiento del profesor (Calendar).
+   * @param p_cargo           Cargo inicial asignado al profesor (Cargo).
+   */
+  public Profesor(String p_titulo, int p_dni, String p_nombre, String p_apellido, Calendar p_fechaNacimiento,
+      Cargo p_cargo) {
+    super(p_dni, p_nombre, p_apellido, p_fechaNacimiento);
     this.setTitulo(p_titulo);
     this.agregarCargo(p_cargo);
   }
@@ -110,7 +129,7 @@ public class Profesor extends Persona {
    *         profesor (String).
    */
   public String mostrarLinea() {
-    return String.format("DNI: %s - Nombre: %s - Sueldo Total: %s\n", super.getDni(), super.nomYApe(),
+    return String.format("DNI: %s - Nombre: %s - Sueldo Total: %s", super.getDni(), super.nomYApe(),
         this.sueldoTotal());
   }
 }

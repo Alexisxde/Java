@@ -117,5 +117,7 @@ public class Gerencia {
   public void mostrarLiquidacion() {
     System.out.format("Gerencia %s\nLiquidación-------------------\n\n", this.getNombre());
     this.liquidar();
+    System.out.println("Alojamiento tipo Cabaña: " + this.contarAlojamientos("Cabaña"));
+    System.out.println("Alojamiento tipo Hotel: " + this.contarAlojamientos("Hotel"));
   }
 }

@@ -16,9 +16,5 @@ public class AdministraciónGerencia {
 
     // * Realizar la liquidación de la estadía
     gerencia.mostrarLiquidacion();
-
-    // * Contar alojamientos
-    System.out.println("Alojamiento tipo Cabaña: " + gerencia.contarAlojamientos("Cabaña"));
-    System.out.println("Alojamiento tipo Hotel: " + gerencia.contarAlojamientos("Hotel"));
   }
 }
