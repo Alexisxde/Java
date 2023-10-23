@@ -34,7 +34,7 @@ public class Premium extends Etiqueta {
    */
   @Override
   public double precio(int q) {
-    return (this.getCosto() + this.adicional()) * q;
+    return (super.getCosto() + this.adicional()) * q;
   }
 
   /**
