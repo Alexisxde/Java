@@ -10,7 +10,7 @@ public class CuentaCorriente extends CuentaBancaria {
    */
   public CuentaCorriente(int p_nroCuenta, Persona p_titular) {
     super(p_nroCuenta, p_titular);
-    this.setLimiteDescubierto(10);
+    this.setLimiteDescubierto(500);
   }
 
   /**
@@ -23,7 +23,7 @@ public class CuentaCorriente extends CuentaBancaria {
    */
   public CuentaCorriente(int p_nroCuenta, double p_saldo, Persona p_titular) {
     super(p_nroCuenta, p_titular, p_saldo);
-    this.setLimiteDescubierto(10);
+    this.setLimiteDescubierto(500);
   }
 
   /**
