@@ -3,8 +3,8 @@ public class MainPedido {
 
     Congelado paletaAgua = new Paleta("Agua", 0);
     Congelado paletaCrema = new Paleta("Crema", 1);
-    Congelado postreEnCaja = new Postre("Postre", 18.75, true);
-    Congelado postreSuelto = new Postre("Postre", 15.00, false);
+    Congelado postreEnCaja = new Postre("Postre", true);
+    Congelado postreSuelto = new Postre("Postre", false);
 
     RenglonPedido renglon1 = new RenglonPedido(85, postreEnCaja);
     Pedido pedido = new Pedido(renglon1);
