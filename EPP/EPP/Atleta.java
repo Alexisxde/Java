@@ -36,7 +36,7 @@ public abstract class Atleta {
   public abstract String imprimirTipo();
 
   public String mostrarDatos() {
-    return String.format("Atleta: %d, - %s - Kilos movidos: %.2f", this.getIdentificador(), this.getNombre(),
+    return String.format("Atleta: %d - %s - Kilos movidos: %.2f", this.getIdentificador(), this.getNombre(),
         this.getKilos());
   }
 }
